@@ -1,6 +1,6 @@
 ﻿namespace Menu.Forms
 {
-    partial class FClientes
+    partial class FFornecedores
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridClientes = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridClientes)).BeginInit();
+            this.dataGridFornecedores = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridFornecedores)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridClientes
+            // dataGridFornecedores
             // 
-            this.dataGridClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridClientes.Location = new System.Drawing.Point(12, 12);
-            this.dataGridClientes.Name = "dataGridClientes";
-            this.dataGridClientes.Size = new System.Drawing.Size(776, 426);
-            this.dataGridClientes.TabIndex = 0;
+            this.dataGridFornecedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridFornecedores.Location = new System.Drawing.Point(12, 12);
+            this.dataGridFornecedores.Name = "dataGridFornecedores";
+            this.dataGridFornecedores.Size = new System.Drawing.Size(776, 426);
+            this.dataGridFornecedores.TabIndex = 0;
             // 
-            // FClientes
+            // FFornecedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridClientes);
-            this.Name = "FClientes";
-            this.Text = "Clientes";
-            this.Load += new System.EventHandler(this.FClientes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridClientes)).EndInit();
+            this.Controls.Add(this.dataGridFornecedores);
+            this.Name = "FFornecedores";
+            this.Text = "FFornecedores";
+            this.Load += new System.EventHandler(this.FFornecedores_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridFornecedores)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        public System.Windows.Forms.DataGridView dataGridClientes;
+        private System.Windows.Forms.DataGridView dataGridFornecedores;
     }
 }

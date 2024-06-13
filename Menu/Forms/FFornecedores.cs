@@ -12,14 +12,14 @@ using System.Windows.Forms;
 
 namespace Menu.Forms
 {
-    public partial class FClientes : Form
+    public partial class FFornecedores : Form
     {
-        public FClientes()
+        public FFornecedores()
         {
             InitializeComponent();
         }
 
-        private void FClientes_Load(object sender, EventArgs e)
+        private void FFornecedores_Load(object sender, EventArgs e)
         {
             string configSoftMaster = "C:\\SGBR\\Master\\ConfigSoftMaster.ini";
             string connectionString = ConnectionParams.ConnectionString(configSoftMaster);
@@ -29,12 +29,12 @@ namespace Menu.Forms
                 {
                     connection.Open();
 
-                    string query = "SELECT * FROM TCLIENTE";
+                    string query = "SELECT * FROM TFORNECEDOR";
                     FbDataAdapter adapter = new FbDataAdapter(query, connection);
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
 
-                    dataGridClientes.DataSource = dataTable;
+                    dataGridFornecedores.DataSource = dataTable;
                 }
                 catch (Exception ex)
                 {

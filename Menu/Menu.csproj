@@ -179,6 +179,18 @@
     <Compile Include="Forms\FClientes.Designer.cs">
       <DependentUpon>FClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FEstoque.Designer.cs">
+      <DependentUpon>FEstoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FFornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FFornecedores.Designer.cs">
+      <DependentUpon>FFornecedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +202,12 @@
     <Compile Include="Tables\TCliente.cs" />
     <EmbeddedResource Include="Forms\FClientes.resx">
       <DependentUpon>FClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FEstoque.resx">
+      <DependentUpon>FEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FFornecedores.resx">
+      <DependentUpon>FFornecedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FMenu.resx">
       <DependentUpon>FMenu.cs</DependentUpon>

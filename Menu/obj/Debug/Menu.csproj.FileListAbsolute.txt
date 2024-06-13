@@ -85,3 +85,5 @@ C:\Users\ramon\source\repos\Menu\Menu\bin\Debug\System.Threading.Tasks.Extension
 C:\Users\ramon\source\repos\Menu\Menu\bin\Debug\System.ValueTuple.xml
 C:\Users\ramon\source\repos\Menu\Menu\obj\Debug\Menu.csproj.Up2Date
 C:\Users\ramon\source\repos\Menu\Menu\obj\Debug\Menu.Forms.FClientes.resources
+C:\Users\ramon\source\repos\Menu\Menu\obj\Debug\Menu.Forms.FEstoque.resources
+C:\Users\ramon\source\repos\Menu\Menu\obj\Debug\Menu.Forms.FFornecedores.resources

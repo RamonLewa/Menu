@@ -12,14 +12,14 @@ using System.Windows.Forms;
 
 namespace Menu.Forms
 {
-    public partial class FClientes : Form
+    public partial class FEstoque : Form
     {
-        public FClientes()
+        public FEstoque()
         {
             InitializeComponent();
         }
 
-        private void FClientes_Load(object sender, EventArgs e)
+        private void FEstoque_Load(object sender, EventArgs e)
         {
             string configSoftMaster = "C:\\SGBR\\Master\\ConfigSoftMaster.ini";
             string connectionString = ConnectionParams.ConnectionString(configSoftMaster);
@@ -34,7 +34,7 @@ namespace Menu.Forms
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
 
-                    dataGridClientes.DataSource = dataTable;
+                    dataGridEstoque.DataSource = dataTable;
                 }
                 catch (Exception ex)
                 {
