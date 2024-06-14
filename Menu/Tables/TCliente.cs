@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fiscal
+namespace Menu.Tables
 {
     public class TCliente
     {

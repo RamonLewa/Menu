@@ -4,8 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Fiscal;
 using System.Windows.Media.Media3D;
+using Menu.Tables;
 using Microsoft.EntityFrameworkCore;
 
 namespace Menu.Classes
@@ -45,12 +45,16 @@ namespace Menu.Classes
     public class DataContext : DbContext
     {
         public DbSet<TCliente> TCliente { get; set; }
+        public DbSet<TEstoque> TEstoque { get; set; }
+        public DbSet<TCliente> TFornecedor { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
             new TClienteTypeConfiguration().Configure(modelBuilder.Entity<TCliente>());
+            new TEstoqueTypeConfiguration().Configure(modelBuilder.Entity<TEstoque>());
+            new TFornecedorTypeConfiguration().Configure(modelBuilder.Entity<TFornecedor>());
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

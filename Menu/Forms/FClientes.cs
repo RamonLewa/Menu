@@ -1,5 +1,6 @@
 ﻿using FirebirdSql.Data.FirebirdClient;
 using Menu.Classes;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,27 +20,17 @@ namespace Menu.Forms
             InitializeComponent();
         }
 
-        private void FClientes_Load(object sender, EventArgs e)
+        private async void FClientes_Load(object sender, EventArgs e)
         {
-            string configSoftMaster = "C:\\SGBR\\Master\\ConfigSoftMaster.ini";
-            string connectionString = ConnectionParams.ConnectionString(configSoftMaster);
-            using (FbConnection connection = new FbConnection(connectionString))
+            await LoadDataAsync();
+        }
+
+        private async Task LoadDataAsync()
+        {
+            using (var context = new DataContext())
             {
-                try
-                {
-                    connection.Open();
-
-                    string query = "SELECT * FROM TCLIENTE";
-                    FbDataAdapter adapter = new FbDataAdapter(query, connection);
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
-
-                    dataGridClientes.DataSource = dataTable;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erro: " + ex.Message);
-                }
+                await context.TCliente.LoadAsync();
+                dataGridClientes.DataSource = context.TCliente.Local.ToBindingList();
             }
         }
     }
