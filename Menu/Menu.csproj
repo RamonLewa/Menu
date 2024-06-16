@@ -173,6 +173,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\DataContext.cs" />
+    <Compile Include="Classes\Planilhas.cs" />
     <Compile Include="Forms\FClientes.cs">
       <SubType>Form</SubType>
     </Compile>

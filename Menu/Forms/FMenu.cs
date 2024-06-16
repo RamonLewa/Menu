@@ -18,22 +18,22 @@ namespace Menu
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void btnClientes_Click(object sender, EventArgs e)
         {
-            FClientes clientes = new FClientes();
-            clientes.ShowDialog();
+            var fClientes = await FClientes.CreateAndLoadAsync();
+            fClientes.ShowDialog();
         }
 
-        private void btnEstoque_Click(object sender, EventArgs e)
+        private async void btnEstoque_Click(object sender, EventArgs e)
         {
-            FEstoque estoque = new FEstoque();
-            estoque.ShowDialog();
+            var fClientes = await FClientes.CreateAndLoadAsync();
+            fClientes.ShowDialog();
         }
 
-        private void btnFornecedores_Click(object sender, EventArgs e)
+        private async void btnFornecedores_Click(object sender, EventArgs e)
         {
-            FFornecedores fornecedores = new FFornecedores();
-            fornecedores.ShowDialog();
+            var fClientes = await FClientes.CreateAndLoadAsync();
+            fClientes.ShowDialog();
         }
     }
 }

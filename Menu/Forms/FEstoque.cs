@@ -11,6 +11,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FirebirdSql.Data.Client;
+using Menu.Tables;
+using System.Threading;
 
 namespace Menu.Forms
 {
@@ -21,18 +23,25 @@ namespace Menu.Forms
             InitializeComponent();
         }
 
-        private async void FEstoque_Load(object sender, EventArgs e)
-        {
-            await LoadDataAsync();
-        }
-
         private async Task LoadDataAsync()
         {
+            List<TEstoque> estoque;
             using (var context = new DataContext())
             {
-                await context.TEstoque.LoadAsync();
-                dataGridEstoque.DataSource = context.TEstoque.Local.ToBindingList();
+                estoque = await Task.Run(() => context.TEstoque.ToList());
             }
+
+            await Task.Factory.StartNew(() =>
+            {
+                dataGridEstoque.DataSource = estoque;
+            }, CancellationToken.None, TaskCreationOptions.None, TaskScheduler.FromCurrentSynchronizationContext());
+        }
+
+        public static async Task<FEstoque> CreateAndLoadAsync()
+        {
+            var form = new FEstoque();
+            await form.LoadDataAsync();
+            return form;
         }
     }
 }

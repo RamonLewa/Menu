@@ -41,7 +41,7 @@
             this.btnClientes.TabIndex = 0;
             this.btnClientes.Text = "Clientes";
             this.btnClientes.UseVisualStyleBackColor = true;
-            this.btnClientes.Click += new System.EventHandler(this.button1_Click);
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // btnEstoque
             // 

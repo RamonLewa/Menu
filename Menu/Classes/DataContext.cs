@@ -46,7 +46,7 @@ namespace Menu.Classes
     {
         public DbSet<TCliente> TCliente { get; set; }
         public DbSet<TEstoque> TEstoque { get; set; }
-        public DbSet<TCliente> TFornecedor { get; set; }
+        public DbSet<TFornecedor> TFornecedor { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
