@@ -8,6 +8,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -20,27 +21,32 @@ namespace Menu.Forms
         public FClientes()
         {
             InitializeComponent();
+            this.Load += new EventHandler(FClientes_Load);
         }
 
-        private async Task LoadDataAsync()
+        private async void FClientes_Load(object sender, EventArgs e)
+        {
+            await LoadDataAsync();
+        }
+
+        public async Task LoadDataAsync()
         {
             List<TCliente> clientes;
+
             using (var context = new DataContext())
             {
-                clientes = await Task.Run(() => context.TCliente.ToList());
+                // Carregar dados assincronamente e paralelamente
+                clientes = await Task.Run(() =>
+                {
+                    return context.TCliente
+                                  .AsParallel()
+                                  .WithDegreeOfParallelism(Environment.ProcessorCount)
+                                  .ToList();
+                });
             }
 
-            await Task.Factory.StartNew(() =>
-            {
-                DataGridClientes.DataSource = clientes;
-            }, CancellationToken.None, TaskCreationOptions.None, TaskScheduler.FromCurrentSynchronizationContext());
-        }
-
-        public static async Task<FClientes> CreateAndLoadAsync()
-        {
-            var form = new FClientes();
-            await form.LoadDataAsync();
-            return form;
+            // Atualizar DataGridView na thread da UI
+            DataGridClientes.DataSource = clientes;
         }
 
         private void dataGridClientes_MouseDown(object sender, MouseEventArgs e)

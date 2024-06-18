@@ -20,20 +20,32 @@ namespace Menu.Forms
         public FFornecedores()
         {
             InitializeComponent();
+            this.Load += new EventHandler(FFornecedores_Load);
         }
 
-        private async Task LoadDataAsync()
+        private async void FFornecedores_Load(object sender, EventArgs e)
         {
-            List<TFornecedor> fornecedor;
+            await LoadDataAsync();
+        }
+
+        public async Task LoadDataAsync()
+        {
+            List<TFornecedor> fornecedores;
+
             using (var context = new DataContext())
             {
-                fornecedor = await Task.Run(() => context.TFornecedor.ToList());
+                // Carregar dados assincronamente e paralelamente
+                fornecedores = await Task.Run(() =>
+                {
+                    return context.TFornecedor
+                                  .AsParallel()
+                                  .WithDegreeOfParallelism(Environment.ProcessorCount)
+                                  .ToList();
+                });
             }
 
-            await Task.Factory.StartNew(() =>
-            {
-                dataGridFornecedores.DataSource = fornecedor;
-            }, CancellationToken.None, TaskCreationOptions.None, TaskScheduler.FromCurrentSynchronizationContext());
+            // Atualizar DataGridView na thread da UI
+            dataGridFornecedores.DataSource = fornecedores;
         }
 
         public static async Task<FFornecedores> CreateAndLoadAsync()

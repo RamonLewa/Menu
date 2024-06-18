@@ -48,6 +48,7 @@
             this.Controls.Add(this.dataGridEstoque);
             this.Name = "FEstoque";
             this.Text = "FEstoque";
+            this.Load += new System.EventHandler(this.FEstoque_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEstoque)).EndInit();
             this.ResumeLayout(false);
 

@@ -20,20 +20,24 @@ namespace Menu
 
         private async void btnClientes_Click(object sender, EventArgs e)
         {
-            var fClientes = await FClientes.CreateAndLoadAsync();
+            var fClientes = new FClientes();
+            await fClientes.LoadDataAsync();
             fClientes.ShowDialog();
+            
         }
 
         private async void btnEstoque_Click(object sender, EventArgs e)
         {
-            var fClientes = await FClientes.CreateAndLoadAsync();
-            fClientes.ShowDialog();
+            var fEstoque = new FEstoque();
+            await fEstoque.LoadDataAsync();
+            fEstoque.ShowDialog();
         }
 
         private async void btnFornecedores_Click(object sender, EventArgs e)
         {
-            var fClientes = await FClientes.CreateAndLoadAsync();
-            fClientes.ShowDialog();
+            var fFornecedores = new FFornecedores();
+            await fFornecedores.LoadDataAsync();
+            fFornecedores.ShowDialog();
         }
     }
 }

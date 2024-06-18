@@ -15,7 +15,7 @@ namespace Menu.Tables
         public int Controle { get; set; }
 
         [DisplayName("Cliente")]
-        public string NomeCliente { get; set; }
+        public string Cliente { get; set; }
 
         [DisplayName("Endereço")]
         public string Endereco { get; set; }
@@ -26,7 +26,7 @@ namespace Menu.Tables
         [DisplayName("Bairro")]
         public string Bairro { get; set; }
 
-        [DisplayName("Código da Cidade")]
+        [DisplayName("Cód. cidade")]
         public int? CodCidade { get; set; }
 
         [DisplayName("Cidade")]
@@ -44,7 +44,7 @@ namespace Menu.Tables
         [DisplayName("Naturalidade")]
         public string Naturalidade { get; set; }
 
-        [DisplayName("Tipo de Cliente")]
+        [DisplayName("Tipo cliente")]
         public string TipoCliente { get; set; }
 
         [DisplayName("RG")]
@@ -62,10 +62,10 @@ namespace Menu.Tables
         [DisplayName("IM")]
         public string IM { get; set; }
 
-        [DisplayName("Data de Nascimento")]
+        [DisplayName("Data nascimento")]
         public DateTime? DataNascimento { get; set; }
 
-        [DisplayName("Data e Hora do Cadastro")]
+        [DisplayName("Data e hora cadastro")]
         public DateTime? DataHoraCadastro { get; set; }
 
         [DisplayName("Pai")]
@@ -83,7 +83,7 @@ namespace Menu.Tables
         [DisplayName("E-mail")]
         public string Email { get; set; }
 
-        [DisplayName("Estado Civil")]
+        [DisplayName("Estado civil")]
         public string EstadoCivil { get; set; }
 
         [DisplayName("Ativo")]
@@ -95,16 +95,16 @@ namespace Menu.Tables
         [DisplayName("Observações")]
         public string Obs { get; set; }
 
-        [DisplayName("Nome do Cônjuge")]
+        [DisplayName("Nome cônjuge")]
         public string NomeConjuge { get; set; }
 
-        [DisplayName("Data da Última Venda")]
+        [DisplayName("Data última venda")]
         public DateTime? DataUltimaVenda { get; set; }
 
-        [DisplayName("Dias sem Comprar")]
+        [DisplayName("Dias sem comprar")]
         public int? DiasSemComprar { get; set; }
 
-        [DisplayName("Código do Convênio")]
+        [DisplayName("Cód. convênio")]
         public int? CodConvenio { get; set; }
 
         [DisplayName("Convênio")]
@@ -113,16 +113,16 @@ namespace Menu.Tables
         [DisplayName("Profissão")]
         public string Profissao { get; set; }
 
-        [DisplayName("Empresa que Trabalha")]
+        [DisplayName("Empresa que trabalha")]
         public string EmpresaQueTrabalha { get; set; }
 
-        [DisplayName("Telefone do Trabalho")]
+        [DisplayName("Telefone trabalho")]
         public string FoneTrabalho { get; set; }
 
-        [DisplayName("Renda Mensal")]
+        [DisplayName("Renda mensal")]
         public decimal? RendaMensal { get; set; }
 
-        [DisplayName("Total Vendido")]
+        [DisplayName("Total vendido")]
         public decimal? TotalVendido { get; set; }
 
         [DisplayName("Nacionalidade")]
@@ -131,20 +131,20 @@ namespace Menu.Tables
         [DisplayName("Número")]
         public string Numero { get; set; }
 
-        [DisplayName("Código Consulta SPC")]
+        [DisplayName("Código consulta SPC")]
         public int? CodConsultaSPC { get; set; }
 
         [DisplayName("Sexo")]
         public string Sexo { get; set; }
 
-        [DisplayName("Código Cidade IBGE")]
+        [DisplayName("Cód. cidade IBGE")]
         public int? CodigoCidadeIGBE { get; set; }
 
-        [DisplayName("Código Emitente")]
+        [DisplayName("Cód. emitente")]
         public int? CodEmitente { get; set; }
 
-        [DisplayName("Nome Contato Jurídica")]
-        public string NomeContatoJuridica { get; set; }
+        [DisplayName("Nome contato jurídico")]
+        public string NomeContatoJuridico { get; set; }
 
         [DisplayName("E-mail 2")]
         public string Email2 { get; set; }
@@ -158,7 +158,7 @@ namespace Menu.Tables
         [DisplayName("Serial")]
         public string Serial { get; set; }
 
-        [DisplayName("Código do Grupo")]
+        [DisplayName("Cód. grupo")]
         public int? CodGrupo { get; set; }
 
         [DisplayName("Grupo")]
@@ -200,37 +200,37 @@ namespace Menu.Tables
         [DisplayName("Campo 10")]
         public string Campo10 { get; set; }
 
-        [DisplayName("ISS Município")]
+        [DisplayName("ISS município")]
         public string ISSMunicipio { get; set; }
 
-        [DisplayName("Dados Adicionais")]
+        [DisplayName("Dados adicionais")]
         public string DadosAdicionais { get; set; }
 
         [DisplayName("Site")]
         public string Site { get; set; }
 
-        [DisplayName("Código do País")]
+        [DisplayName("Código do país")]
         public string CodigoPais { get; set; }
 
         [DisplayName("CSOSN")]
         public string CSOSN { get; set; }
 
-        [DisplayName("Percentual ICMS Próprio ST")]
+        [DisplayName("Perc. ICMS próprio ST")]
         public decimal? PercICMSProprioST { get; set; }
 
-        [DisplayName("Percentual MVA Original")]
+        [DisplayName("Perc. MVA original")]
         public decimal? PercMVAOriginal { get; set; }
 
-        [DisplayName("Percentual ICMS ST Interna")]
+        [DisplayName("Perc. ICMS ST interna")]
         public decimal? PercICMSInterna { get; set; }
 
-        [DisplayName("Percentual Redução BC ST")]
+        [DisplayName("Perc. eedução BC ST")]
         public decimal? PercReducaoBCST { get; set; }
 
         [DisplayName("Descrição CSOSN")]
         public string DescricaoCSOSN { get; set; }
 
-        [DisplayName("Código CST Origem")]
+        [DisplayName("Cód. CST origem")]
         public int? CodigoCSTOrigem { get; set; }
 
         [DisplayName("Origem")]
@@ -245,40 +245,40 @@ namespace Menu.Tables
         [DisplayName("Tributado")]
         public string Tributado { get; set; }
 
-        [DisplayName("Código CST Origem")]
+        [DisplayName("Cód. CST origem")]
         public int? CodCSTOrigem { get; set; }
 
-        [DisplayName("Mensagem Fiscal")]
+        [DisplayName("Mensagem fiscal")]
         public string MensagemFiscal { get; set; }
 
-        [DisplayName("Código Tabela Preço")]
+        [DisplayName("Cód. tabela preço")]
         public int? CodTabelaPreco { get; set; }
 
-        [DisplayName("Tabela Preço")]
+        [DisplayName("Tabela preço")]
         public string TabelaPreco { get; set; }
 
-        [DisplayName("Código Vendedor")]
+        [DisplayName("Cód. vendedor")]
         public int? CodVendedor { get; set; }
 
         [DisplayName("Vendedor")]
         public string Vendedor { get; set; }
 
-        [DisplayName("Limite de Crédito")]
+        [DisplayName("Limite crédito")]
         public decimal? LimiteCredito { get; set; }
 
-        [DisplayName("Código Parcela Predefinida")]
+        [DisplayName("Cód. parcela predefinida")]
         public int? CodParcelaPredefinida { get; set; }
 
-        [DisplayName("Parcela Predefinida")]
+        [DisplayName("Parcela predefinida")]
         public string ParcelaPredefinida { get; set; }
 
-        [DisplayName("Código Transportadora")]
+        [DisplayName("Cód. transportadora")]
         public int? CodTransportadora { get; set; }
 
         [DisplayName("Transportadora")]
         public string Transportadora { get; set; }
 
-        [DisplayName("Valor do Frete")]
+        [DisplayName("Valor frete")]
         public decimal? ValorFrete { get; set; }
 
         [DisplayName("MD5O")]
@@ -287,19 +287,19 @@ namespace Menu.Tables
         [DisplayName("SUFRAMA")]
         public string SUFRAMA { get; set; }
 
-        [DisplayName("Percentual FCP")]
+        [DisplayName("Perc. FCP")]
         public decimal? PercFCP { get; set; }
 
-        [DisplayName("Percentual Redução BC")]
+        [DisplayName("Perc. redução BC")]
         public decimal? PercReducaoBC { get; set; }
 
-        [DisplayName("CST CSOSN Aplicar")]
+        [DisplayName("CST CSOSN aplicar")]
         public string CSTCSOSNAplicar { get; set; }
 
         [DisplayName("Sincronizado")]
         public string Sincronizado { get; set; }
 
-        [DisplayName("Utilizar Cashback")]
+        [DisplayName("Utilizar cashback")]
         public string UtilizarCashback { get; set; }
     }
 
@@ -313,7 +313,7 @@ namespace Menu.Tables
 
             builder.Property(e => e.Controle).HasColumnName("CONTROLE").IsRequired();
 
-            builder.Property(e => e.NomeCliente).HasColumnName("CLIENTE");
+            builder.Property(e => e.Cliente).HasColumnName("CLIENTE");
 
             builder.Property(e => e.Endereco).HasColumnName("ENDERECO");
 
@@ -399,7 +399,7 @@ namespace Menu.Tables
 
             builder.Property(e => e.CodEmitente).HasColumnName("CODEMITENTE");
 
-            builder.Property(e => e.NomeContatoJuridica).HasColumnName("NOMECONTATOJURIDICA");
+            builder.Property(e => e.NomeContatoJuridico).HasColumnName("NOMECONTATOJURIDICA");
 
             builder.Property(e => e.Email2).HasColumnName("EMAIL2");
 

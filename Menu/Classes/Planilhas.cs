@@ -16,30 +16,32 @@ namespace Menu.Classes
         {
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 
-            List<TCliente> clientes = new List<TCliente>();
-
-            using (var package = new ExcelPackage())
+            using (var context = new DataContext())
             {
-                var worksheet = package.Workbook.Worksheets.Add("Planilha teste");
-
-                worksheet.Cells[1, 1].Value = "Nome";
-
-                for(int i = 0;  i < clientes.Count; i++)
+                List<TCliente> clientes = context.TCliente.ToList();
+                using (var package = new ExcelPackage())
                 {
-                    worksheet.Cells[i + 2, 1].Value = clientes[i].Controle;
-                }
+                    var worksheet = package.Workbook.Worksheets.Add("Planilha teste");
 
-                SaveFileDialog saveFileDialog = new SaveFileDialog();
-                saveFileDialog.Filter = "Planilha Excel|*.xlsx";
-                saveFileDialog.Title = "Salvar Planilha Clientes";
-                saveFileDialog.FileName = "Clientes";
-                saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                    worksheet.Cells[1, 1].Value = "Nome";
 
-                if(saveFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    string caminhoArquivo = saveFileDialog.FileName;
-                    package.SaveAs(caminhoArquivo);
-                    MessageBox.Show("Arquivo gerado com sucesso!");
+                    for(int i = 0;  i < clientes.Count; i++)
+                    {
+                        worksheet.Cells[i + 2, 1].Value = clientes[i].Cliente;
+                    }
+
+                    SaveFileDialog saveFileDialog = new SaveFileDialog();
+                    saveFileDialog.Filter = "Planilha Excel|*.xlsx"; 
+                    saveFileDialog.Title = "Salvar Planilha Clientes";
+                    saveFileDialog.FileName = "Clientes";
+                    saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+                    if(saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        string caminhoArquivo = saveFileDialog.FileName;
+                        package.SaveAs(caminhoArquivo);
+                        MessageBox.Show("Arquivo gerado com sucesso!");
+                    }
                 }
             }
         }

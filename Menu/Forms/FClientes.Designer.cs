@@ -54,7 +54,7 @@
             this.toolStripSeparator1,
             this.importarClientes});
             this.ContextMenuClientes.Name = "ContextMenuClientes";
-            this.ContextMenuClientes.Size = new System.Drawing.Size(184, 76);
+            this.ContextMenuClientes.Size = new System.Drawing.Size(184, 54);
             // 
             // exportarClientes
             // 
@@ -82,6 +82,7 @@
             this.Controls.Add(this.DataGridClientes);
             this.Name = "FClientes";
             this.Text = "Clientes";
+            this.Load += new System.EventHandler(this.FClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridClientes)).EndInit();
             this.ContextMenuClientes.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -48,6 +48,7 @@
             this.Controls.Add(this.dataGridFornecedores);
             this.Name = "FFornecedores";
             this.Text = "FFornecedores";
+            this.Load += new System.EventHandler(this.FFornecedores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridFornecedores)).EndInit();
             this.ResumeLayout(false);
 
