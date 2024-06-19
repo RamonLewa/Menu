@@ -24,9 +24,9 @@ namespace Menu.Forms
             this.Load += new EventHandler(FClientes_Load);
         }
 
-        private async void FClientes_Load(object sender, EventArgs e)
+        private void FClientes_Load(object sender, EventArgs e)
         {
-            await LoadDataAsync();
+             
         }
 
         public async Task LoadDataAsync()
@@ -35,7 +35,6 @@ namespace Menu.Forms
 
             using (var context = new DataContext())
             {
-                // Carregar dados assincronamente e paralelamente
                 clientes = await Task.Run(() =>
                 {
                     return context.TCliente
@@ -45,7 +44,6 @@ namespace Menu.Forms
                 });
             }
 
-            // Atualizar DataGridView na thread da UI
             DataGridClientes.DataSource = clientes;
         }
 
@@ -69,6 +67,12 @@ namespace Menu.Forms
         {
             ExportarPlanilhaClientes planilha = new ExportarPlanilhaClientes();
             planilha.CreateExcelFile();
+        }
+
+        private void importarClientes_Click(object sender, EventArgs e)
+        {
+            ImportarPlanilhaClientes planilha = new ImportarPlanilhaClientes();
+            planilha.ImportExcelFile();
         }
     }
 }

@@ -54,7 +54,7 @@
             this.toolStripSeparator1,
             this.importarClientes});
             this.ContextMenuClientes.Name = "ContextMenuClientes";
-            this.ContextMenuClientes.Size = new System.Drawing.Size(184, 54);
+            this.ContextMenuClientes.Size = new System.Drawing.Size(184, 76);
             // 
             // exportarClientes
             // 
@@ -73,6 +73,7 @@
             this.importarClientes.Name = "importarClientes";
             this.importarClientes.Size = new System.Drawing.Size(183, 22);
             this.importarClientes.Text = "Importar clientes .xls";
+            this.importarClientes.Click += new System.EventHandler(this.importarClientes_Click);
             // 
             // FClientes
             // 
