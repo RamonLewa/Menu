@@ -14,59 +14,59 @@ namespace Menu.Tables
         [DisplayName("Código")]
         public int Controle { get; set; }
 
-        [DisplayName("Razão social")]
-        public string RazaoSocial { get; set; }
-
         [DisplayName("Nome fantasia")]
         public string NomeFantasia { get; set; }
 
-        [DisplayName("CNPJ")]
-        public string CNPJ { get; set; }
+        [DisplayName("Razão social")]
+        public string RazaoSocial { get; set; }
 
-        [DisplayName("Endereço")]
-        public string Endereco { get; set; }
-
-        [DisplayName("Bairro")]
-        public string Bairro { get; set; }
-
-        [DisplayName("Cód. cidade")]
-        public int? CodCidade { get; set; }
-
-        [DisplayName("Cód. cidade IBGE")]
-        public string CodigoCidadeIBGE { get; set; }
-
-        [DisplayName("Cidade")]
-        public string Cidade { get; set; }
-
-        [DisplayName("Cód. país")]
-        public string CodigoPais { get; set; }
-
-        [DisplayName("UF")]
-        public string UF { get; set; }
-
-        [DisplayName("CEP")]
-        public string CEP { get; set; }
+        [DisplayName("CPF")]
+        public string CPF { get; set; }
 
         [DisplayName("RG")]
         public string RG { get; set; }
 
-        [DisplayName("CPF")]
-        public string CPF { get; set; }
+        [DisplayName("CNPJ")]
+        public string CNPJ { get; set; }
+
+        [DisplayName("Celular")]
+        public string Celular { get; set; }
+
+        [DisplayName("Telefone")]
+        public string Telefone { get; set; }
+
+        [DisplayName("País")]
+        public string Pais { get; set; }
+
+        [DisplayName("UF")]
+        public string UF { get; set; }
+
+        [DisplayName("Cód. cidade")]
+        public int? CodCidade { get; set; }
+
+        [DisplayName("Cidade")]
+        public string Cidade { get; set; }
+
+        [DisplayName("Bairro")]
+        public string Bairro { get; set; }
+
+        [DisplayName("Endereço")]
+        public string Endereco { get; set; }
+
+        [DisplayName("CEP")]
+        public string CEP { get; set; }
+
+        [DisplayName("Número")]
+        public string Numero { get; set; }
+
+        [DisplayName("Complemento")]
+        public string Complemento { get; set; }
 
         [DisplayName("IE")]
         public string IE { get; set; }
 
         [DisplayName("IM")]
         public string IM { get; set; }
-
-        [DisplayName("Complemento")]
-        public string Complemento { get; set; }
-
-        [DisplayName("Telefone")]
-        public string Telefone { get; set; }
-
-        [DisplayName("Celular")]
-        public string Celular { get; set; }
 
         [DisplayName("SAC")]
         public string SAC { get; set; }
@@ -77,20 +77,14 @@ namespace Menu.Tables
         [DisplayName("Site")]
         public string Site { get; set; }
 
-        [DisplayName("Obs.")]
-        public string Obs { get; set; }
-
         [DisplayName("Forma de pagamento")]
         public string FormaPagamento { get; set; }
 
-        [DisplayName("País")]
-        public string Pais { get; set; }
-
-        [DisplayName("Número")]
-        public string Numero { get; set; }
-
-        [DisplayName("Contato")]
+        [DisplayName("Nome contato jurídica")]
         public string NomeContatoJuridica { get; set; }
+
+        [DisplayName("Data hora cadastro")]
+        public DateTime? DataHoraCadastro { get; set; }
 
         [DisplayName("Campo 1")]
         public string Campo1 { get; set; }
@@ -122,20 +116,11 @@ namespace Menu.Tables
         [DisplayName("Campo 10")]
         public string Campo10 { get; set; }
 
-        [DisplayName("Data hora cadastro")]
-        public DateTime? DataHoraCadastro { get; set; }
+        [DisplayName("Cód. cidade IBGE")]
+        public string CodigoCidadeIBGE { get; set; }
 
         [DisplayName("Ativo")]
         public string Ativo { get; set; }
-
-        [DisplayName("Cód. emitente")]
-        public int? CodEmitente { get; set; }
-
-        [DisplayName("Contribuinte IPI")]
-        public string ContribuinteIPI { get; set; }
-
-        [DisplayName("Suframa")]
-        public string Suframa { get; set; }
 
     }
 
@@ -149,43 +134,41 @@ namespace Menu.Tables
 
             builder.Property(e => e.Controle).HasColumnName("CONTROLE").IsRequired();
 
-            builder.Property(e => e.DataHoraCadastro).HasColumnName("DATAHORACADASTRO").IsRequired();
+            builder.Property(e => e.NomeFantasia).HasColumnName("NOMEFANTASIA");
 
             builder.Property(e => e.RazaoSocial).HasColumnName("RAZAOSOCIAL").IsRequired();
 
-            builder.Property(e => e.NomeFantasia).HasColumnName("NOMEFANTASIA");
-
-            builder.Property(e => e.Endereco).HasColumnName("ENDERECO");
-
-            builder.Property(e => e.Bairro).HasColumnName("BAIRRO");
-
-            builder.Property(e => e.CodCidade).HasColumnName("CODCIDADE");
-
-            builder.Property(e => e.CodigoCidadeIBGE).HasColumnName("CODIGOCIDADEIBGE");
-
-            builder.Property(e => e.Cidade).HasColumnName("CIDADE");
-
-            builder.Property(e => e.CodigoPais).HasColumnName("CODIGOPAIS");
-
-            builder.Property(e => e.UF).HasColumnName("UF");
-
-            builder.Property(e => e.CEP).HasColumnName("CEP");
+            builder.Property(c => c.CPF).HasColumnName("CPF").HasMaxLength(20);
 
             builder.Property(e => e.RG).HasColumnName("RG");
 
-            builder.Property(c => c.CPF).HasColumnName("CPF").HasMaxLength(20);
-
             builder.Property(c => c.CNPJ).HasColumnName("CNPJ").HasMaxLength(20);
+
+            builder.Property(e => e.Celular).HasColumnName("CELULAR");
+
+            builder.Property(e => e.Telefone).HasColumnName("TELEFONE");
+
+            builder.Property(e => e.Pais).HasColumnName("PAIS");
+
+            builder.Property(e => e.UF).HasColumnName("UF");
+
+            builder.Property(e => e.CodCidade).HasColumnName("CODCIDADE");
+
+            builder.Property(e => e.Cidade).HasColumnName("CIDADE");
+
+            builder.Property(e => e.Bairro).HasColumnName("BAIRRO");
+
+            builder.Property(e => e.Endereco).HasColumnName("ENDERECO");
+
+            builder.Property(e => e.CEP).HasColumnName("CEP");
+
+            builder.Property(e => e.Numero).HasColumnName("NUMERO");
+
+            builder.Property(e => e.Complemento).HasColumnName("COMPLEMENTO");
 
             builder.Property(e => e.IE).HasColumnName("IE");
 
             builder.Property(e => e.IM).HasColumnName("IM");
-
-            builder.Property(e => e.Complemento).HasColumnName("COMPLEMENTO");
-
-            builder.Property(e => e.Telefone).HasColumnName("TELEFONE");
-
-            builder.Property(e => e.Celular).HasColumnName("CELULAR");
 
             builder.Property(e => e.SAC).HasColumnName("SAC");
 
@@ -193,15 +176,11 @@ namespace Menu.Tables
 
             builder.Property(e => e.Site).HasColumnName("SITE");
 
-            builder.Property(e => e.Obs).HasColumnName("OBS");
-
             builder.Property(e => e.FormaPagamento).HasColumnName("FORMAPAGAMENTO");
 
-            builder.Property(e => e.Pais).HasColumnName("PAIS");
-
-            builder.Property(e => e.Numero).HasColumnName("NUMERO");
-
             builder.Property(e => e.NomeContatoJuridica).HasColumnName("NOMECONTATOJURIDICA");
+
+            builder.Property(e => e.DataHoraCadastro).HasColumnName("DATAHORACADASTRO").IsRequired();
 
             builder.Property(e => e.Campo1).HasColumnName("CAMPO1");
 
@@ -225,11 +204,7 @@ namespace Menu.Tables
 
             builder.Property(e => e.Ativo).HasColumnName("ATIVO");
 
-            builder.Property(e => e.CodEmitente).HasColumnName("CODEMITENTE");
-
-            builder.Property(e => e.ContribuinteIPI).HasColumnName("CONTRIBUINTEIPI");
-
-            builder.Property(e => e.Suframa).HasColumnName("SUFRAMA");
+            builder.Property(e => e.CodigoCidadeIBGE).HasColumnName("CODIGOCIDADEIBGE");
         }
     }
 }

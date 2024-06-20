@@ -17,38 +17,8 @@ namespace Menu.Tables
         [DisplayName("Cliente")]
         public string Cliente { get; set; }
 
-        [DisplayName("Endereço")]
-        public string Endereco { get; set; }
-
-        [DisplayName("Complemento")]
-        public string Complemento { get; set; }
-
-        [DisplayName("Bairro")]
-        public string Bairro { get; set; }
-
-        [DisplayName("Cód. cidade")]
-        public int? CodCidade { get; set; }
-
-        [DisplayName("Cidade")]
-        public string Cidade { get; set; }
-
-        [DisplayName("UF")]
-        public string UF { get; set; }
-
-        [DisplayName("País")]
-        public string Pais { get; set; }
-
-        [DisplayName("CEP")]
-        public string CEP { get; set; }
-
-        [DisplayName("Naturalidade")]
-        public string Naturalidade { get; set; }
-
-        [DisplayName("Tipo cliente")]
-        public string TipoCliente { get; set; }
-
-        [DisplayName("RG")]
-        public string RG { get; set; }
+        [DisplayName("Fantasia")]
+        public string Fantasia { get; set; }
 
         [DisplayName("CPF")]
         public string CPF { get; set; }
@@ -56,14 +26,68 @@ namespace Menu.Tables
         [DisplayName("CNPJ")]
         public string CNPJ { get; set; }
 
-        [DisplayName("IE")]
-        public string IE { get; set; }
+        [DisplayName("Telefone")]
+        public string Telefone { get; set; }
 
-        [DisplayName("IM")]
-        public string IM { get; set; }
+        [DisplayName("Celular")]
+        public string Celular { get; set; }
+
+        [DisplayName("País")]
+        public string Pais { get; set; }
+
+        [DisplayName("UF")]
+        public string UF { get; set; }
+
+        [DisplayName("Cidade")]
+        public string Cidade { get; set; }
+
+        [DisplayName("Bairro")]
+        public string Bairro { get; set; }
+
+        [DisplayName("Endereço")]
+        public string Endereco { get; set; }
+
+        [DisplayName("Número")]
+        public string Numero { get; set; }
+
+        [DisplayName("CEP")]
+        public string CEP { get; set; }
+
+        [DisplayName("Complemento")]
+        public string Complemento { get; set; }
+
+        [DisplayName("E-mail")]
+        public string Email { get; set; }
+
+        [DisplayName("E-mail 2")]
+        public string Email2 { get; set; }
+
+        [DisplayName("Nacionalidade")]
+        public string Nacionalidade { get; set; }
+
+        [DisplayName("Naturalidade")]
+        public string Naturalidade { get; set; }
 
         [DisplayName("Data nascimento")]
         public DateTime? DataNascimento { get; set; }
+
+        [DisplayName("Tipo de cliente")]
+        public string TipoCliente { get; set; }
+
+        [DisplayName("RG")]
+        public string RG { get; set; }
+
+        [DisplayName("IE")]
+        public string IE { get; set; }
+
+        [DisplayName("Estado civil")]
+        public string EstadoCivil { get; set; }
+
+        [DisplayName("Sexo")]
+        public string Sexo { get; set; }
+
+        [DisplayName("IM")]
+        public string IM { get; set; }
 
         [DisplayName("Data e hora cadastro")]
         public DateTime? DataHoraCadastro { get; set; }
@@ -74,35 +98,17 @@ namespace Menu.Tables
         [DisplayName("Mãe")]
         public string Mae { get; set; }
 
-        [DisplayName("Telefone")]
-        public string Telefone { get; set; }
-
-        [DisplayName("Celular")]
-        public string Celular { get; set; }
-
-        [DisplayName("E-mail")]
-        public string Email { get; set; }
-
-        [DisplayName("Estado civil")]
-        public string EstadoCivil { get; set; }
-
-        [DisplayName("Ativo")]
-        public string Ativo { get; set; }
-
-        [DisplayName("Fantasia")]
-        public string Fantasia { get; set; }
-
-        [DisplayName("Observações")]
-        public string Obs { get; set; }
-
         [DisplayName("Nome cônjuge")]
         public string NomeConjuge { get; set; }
+
+        [DisplayName("Nome contato jurídico")]
+        public string NomeContatoJuridico { get; set; }
 
         [DisplayName("Data última venda")]
         public DateTime? DataUltimaVenda { get; set; }
 
-        [DisplayName("Dias sem comprar")]
-        public int? DiasSemComprar { get; set; }
+        [DisplayName("Limite crédito")]
+        public decimal? LimiteCredito { get; set; }
 
         [DisplayName("Cód. convênio")]
         public int? CodConvenio { get; set; }
@@ -113,62 +119,32 @@ namespace Menu.Tables
         [DisplayName("Profissão")]
         public string Profissao { get; set; }
 
-        [DisplayName("Empresa que trabalha")]
+        [DisplayName("Empresa")]
         public string EmpresaQueTrabalha { get; set; }
 
-        [DisplayName("Telefone trabalho")]
+        [DisplayName("Fone trabalho")]
         public string FoneTrabalho { get; set; }
 
         [DisplayName("Renda mensal")]
         public decimal? RendaMensal { get; set; }
 
-        [DisplayName("Total vendido")]
-        public decimal? TotalVendido { get; set; }
+        [DisplayName("Dias sem comprar")]
+        public int? DiasSemComprar { get; set; }
 
-        [DisplayName("Nacionalidade")]
-        public string Nacionalidade { get; set; }
-
-        [DisplayName("Número")]
-        public string Numero { get; set; }
-
-        [DisplayName("Código consulta SPC")]
-        public int? CodConsultaSPC { get; set; }
-
-        [DisplayName("Sexo")]
-        public string Sexo { get; set; }
-
-        [DisplayName("Cód. cidade IBGE")]
+        [DisplayName("Código cidade IBGE")]
         public int? CodigoCidadeIGBE { get; set; }
-
-        [DisplayName("Cód. emitente")]
-        public int? CodEmitente { get; set; }
-
-        [DisplayName("Nome contato jurídico")]
-        public string NomeContatoJuridico { get; set; }
-
-        [DisplayName("E-mail 2")]
-        public string Email2 { get; set; }
 
         [DisplayName("Status")]
         public string Status { get; set; }
 
-        [DisplayName("MD5L")]
-        public string MD5L { get; set; }
+        [DisplayName("Cód. vendedor")]
+        public int? CodVendedor { get; set; }
 
-        [DisplayName("Serial")]
-        public string Serial { get; set; }
+        [DisplayName("Vendedor")]
+        public string Vendedor { get; set; }
 
-        [DisplayName("Cód. grupo")]
-        public int? CodGrupo { get; set; }
-
-        [DisplayName("Grupo")]
-        public string Grupo { get; set; }
-
-        [DisplayName("Foto")]
-        public string Foto { get; set; }
-
-        [DisplayName("Tributação")]
-        public string Tributacao { get; set; }
+        [DisplayName("Ativo")]
+        public string Ativo { get; set; }
 
         [DisplayName("Campo 1")]
         public string Campo1 { get; set; }
@@ -200,107 +176,6 @@ namespace Menu.Tables
         [DisplayName("Campo 10")]
         public string Campo10 { get; set; }
 
-        [DisplayName("ISS município")]
-        public string ISSMunicipio { get; set; }
-
-        [DisplayName("Dados adicionais")]
-        public string DadosAdicionais { get; set; }
-
-        [DisplayName("Site")]
-        public string Site { get; set; }
-
-        [DisplayName("Código do país")]
-        public string CodigoPais { get; set; }
-
-        [DisplayName("CSOSN")]
-        public string CSOSN { get; set; }
-
-        [DisplayName("Perc. ICMS próprio ST")]
-        public decimal? PercICMSProprioST { get; set; }
-
-        [DisplayName("Perc. MVA original")]
-        public decimal? PercMVAOriginal { get; set; }
-
-        [DisplayName("Perc. ICMS ST interna")]
-        public decimal? PercICMSInterna { get; set; }
-
-        [DisplayName("Perc. eedução BC ST")]
-        public decimal? PercReducaoBCST { get; set; }
-
-        [DisplayName("Descrição CSOSN")]
-        public string DescricaoCSOSN { get; set; }
-
-        [DisplayName("Cód. CST origem")]
-        public int? CodigoCSTOrigem { get; set; }
-
-        [DisplayName("Origem")]
-        public string Origem { get; set; }
-
-        [DisplayName("Possui ICMS ST")]
-        public string PossuiICMSST { get; set; }
-
-        [DisplayName("Isento")]
-        public string Isento { get; set; }
-
-        [DisplayName("Tributado")]
-        public string Tributado { get; set; }
-
-        [DisplayName("Cód. CST origem")]
-        public int? CodCSTOrigem { get; set; }
-
-        [DisplayName("Mensagem fiscal")]
-        public string MensagemFiscal { get; set; }
-
-        [DisplayName("Cód. tabela preço")]
-        public int? CodTabelaPreco { get; set; }
-
-        [DisplayName("Tabela preço")]
-        public string TabelaPreco { get; set; }
-
-        [DisplayName("Cód. vendedor")]
-        public int? CodVendedor { get; set; }
-
-        [DisplayName("Vendedor")]
-        public string Vendedor { get; set; }
-
-        [DisplayName("Limite crédito")]
-        public decimal? LimiteCredito { get; set; }
-
-        [DisplayName("Cód. parcela predefinida")]
-        public int? CodParcelaPredefinida { get; set; }
-
-        [DisplayName("Parcela predefinida")]
-        public string ParcelaPredefinida { get; set; }
-
-        [DisplayName("Cód. transportadora")]
-        public int? CodTransportadora { get; set; }
-
-        [DisplayName("Transportadora")]
-        public string Transportadora { get; set; }
-
-        [DisplayName("Valor frete")]
-        public decimal? ValorFrete { get; set; }
-
-        [DisplayName("MD5O")]
-        public string MD5O { get; set; }
-
-        [DisplayName("SUFRAMA")]
-        public string SUFRAMA { get; set; }
-
-        [DisplayName("Perc. FCP")]
-        public decimal? PercFCP { get; set; }
-
-        [DisplayName("Perc. redução BC")]
-        public decimal? PercReducaoBC { get; set; }
-
-        [DisplayName("CST CSOSN aplicar")]
-        public string CSTCSOSNAplicar { get; set; }
-
-        [DisplayName("Sincronizado")]
-        public string Sincronizado { get; set; }
-
-        [DisplayName("Utilizar cashback")]
-        public string UtilizarCashback { get; set; }
     }
 
     public class TClienteTypeConfiguration : IEntityTypeConfiguration<TCliente>
@@ -315,37 +190,53 @@ namespace Menu.Tables
 
             builder.Property(e => e.Cliente).HasColumnName("CLIENTE");
 
-            builder.Property(e => e.Endereco).HasColumnName("ENDERECO");
-
-            builder.Property(e => e.Complemento).HasColumnName("COMPLEMENTO");
-
-            builder.Property(e => e.Bairro).HasColumnName("BAIRRO");
-
-            builder.Property(e => e.CodCidade).HasColumnName("CODCIDADE");
-
-            builder.Property(e => e.Cidade).HasColumnName("CIDADE");
-
-            builder.Property(e => e.UF).HasColumnName("UF");
-
-            builder.Property(e => e.Pais).HasColumnName("PAIS");
-
-            builder.Property(e => e.CEP).HasColumnName("CEP");
-
-            builder.Property(e => e.Naturalidade).HasColumnName("NATURALIDADE");
-
-            builder.Property(e => e.TipoCliente).HasColumnName("TIPOCLIENTE");
-
-            builder.Property(e => e.RG).HasColumnName("RG");
+            builder.Property(e => e.Fantasia).HasColumnName("FANTASIA");
 
             builder.Property(e => e.CPF).HasColumnName("CPF");
 
             builder.Property(e => e.CNPJ).HasColumnName("CNPJ");
 
-            builder.Property(e => e.IE).HasColumnName("IE");
+            builder.Property(e => e.Telefone).HasColumnName("TELEFONE");
 
-            builder.Property(e => e.IM).HasColumnName("IM");
+            builder.Property(e => e.Celular).HasColumnName("CELULAR");
+
+            builder.Property(e => e.Pais).HasColumnName("PAIS");
+
+            builder.Property(e => e.UF).HasColumnName("UF");
+
+            builder.Property(e => e.Cidade).HasColumnName("CIDADE");
+
+            builder.Property(e => e.Bairro).HasColumnName("BAIRRO");
+
+            builder.Property(e => e.Endereco).HasColumnName("ENDERECO");
+
+            builder.Property(e => e.Numero).HasColumnName("NUMERO");
+
+            builder.Property(e => e.CEP).HasColumnName("CEP");
+
+            builder.Property(e => e.Complemento).HasColumnName("COMPLEMENTO");
+
+            builder.Property(e => e.Email).HasColumnName("EMAIL");
+
+            builder.Property(e => e.Email2).HasColumnName("EMAIL2");
+
+            builder.Property(e => e.Nacionalidade).HasColumnName("NACIONALIDADE");
+
+            builder.Property(e => e.Naturalidade).HasColumnName("NATURALIDADE");
 
             builder.Property(e => e.DataNascimento).HasColumnName("DATANASCIMENTO");
+
+            builder.Property(e => e.TipoCliente).HasColumnName("TIPOCLIENTE");
+
+            builder.Property(e => e.RG).HasColumnName("RG");
+
+            builder.Property(e => e.IE).HasColumnName("IE");
+
+            builder.Property(e => e.EstadoCivil).HasColumnName("ESTADOCIVIL");
+
+            builder.Property(e => e.Sexo).HasColumnName("SEXO");
+
+            builder.Property(e => e.IM).HasColumnName("IM");
 
             builder.Property(e => e.DataHoraCadastro).HasColumnName("DATAHORACADASTRO");
 
@@ -353,25 +244,13 @@ namespace Menu.Tables
 
             builder.Property(e => e.Mae).HasColumnName("MAE");
 
-            builder.Property(e => e.Telefone).HasColumnName("TELEFONE");
-
-            builder.Property(e => e.Celular).HasColumnName("CELULAR");
-
-            builder.Property(e => e.Email).HasColumnName("EMAIL");
-
-            builder.Property(e => e.EstadoCivil).HasColumnName("ESTADOCIVIL");
-
-            builder.Property(e => e.Ativo).HasColumnName("ATIVO");
-
-            builder.Property(e => e.Fantasia).HasColumnName("FANTASIA");
-
-            builder.Property(e => e.Obs).HasColumnName("OBS");
-
             builder.Property(e => e.NomeConjuge).HasColumnName("NOMECONJUGE");
+
+            builder.Property(e => e.NomeContatoJuridico).HasColumnName("NOMECONTATOJURIDICA");
 
             builder.Property(e => e.DataUltimaVenda).HasColumnName("DATAULTIMAVENDA");
 
-            builder.Property(e => e.DiasSemComprar).HasColumnName("DIASSEMCOMPRAR");
+            builder.Property(e => e.LimiteCredito).HasColumnName("LIMITECREDITO");
 
             builder.Property(e => e.CodConvenio).HasColumnName("CODCONVENIO");
 
@@ -385,37 +264,17 @@ namespace Menu.Tables
 
             builder.Property(e => e.RendaMensal).HasColumnName("RENDAMENSAL");
 
-            builder.Property(e => e.TotalVendido).HasColumnName("TOTALVENDIDO");
-
-            builder.Property(e => e.Nacionalidade).HasColumnName("NACIONALIDADE");
-
-            builder.Property(e => e.Numero).HasColumnName("NUMERO");
-
-            builder.Property(e => e.CodConsultaSPC).HasColumnName("CODCONSULTASPC");
-
-            builder.Property(e => e.Sexo).HasColumnName("SEXO");
+            builder.Property(e => e.DiasSemComprar).HasColumnName("DIASSEMCOMPRAR");
 
             builder.Property(e => e.CodigoCidadeIGBE).HasColumnName("CODIGOCIDADEIBGE");
 
-            builder.Property(e => e.CodEmitente).HasColumnName("CODEMITENTE");
-
-            builder.Property(e => e.NomeContatoJuridico).HasColumnName("NOMECONTATOJURIDICA");
-
-            builder.Property(e => e.Email2).HasColumnName("EMAIL2");
-
             builder.Property(e => e.Status).HasColumnName("STATUS");
 
-            builder.Property(e => e.MD5L).HasColumnName("MD5L");
+            builder.Property(e => e.CodVendedor).HasColumnName("CODVENDEDOR");
 
-            builder.Property(e => e.Serial).HasColumnName("SERIAL");
+            builder.Property(e => e.Vendedor).HasColumnName("VENDEDOR");
 
-            builder.Property(e => e.CodGrupo).HasColumnName("CODGRUPO");
-
-            builder.Property(e => e.Grupo).HasColumnName("GRUPO");
-
-            builder.Property(e => e.Foto).HasColumnName("FOTO");
-
-            builder.Property(e => e.Tributacao).HasColumnName("TRIBUTACAO");
+            builder.Property(e => e.Ativo).HasColumnName("ATIVO");
 
             builder.Property(e => e.Campo1).HasColumnName("CAMPO1");
 
@@ -437,73 +296,6 @@ namespace Menu.Tables
 
             builder.Property(e => e.Campo10).HasColumnName("CAMPO10");
 
-            builder.Property(e => e.ISSMunicipio).HasColumnName("ISSMUNICIPIO");
-
-            builder.Property(e => e.DadosAdicionais).HasColumnName("DADOSADICIONAIS");
-
-            builder.Property(e => e.Site).HasColumnName("SITE");
-
-            builder.Property(e => e.CodigoPais).HasColumnName("CODIGOPAIS");
-
-            builder.Property(e => e.CSOSN).HasColumnName("CSOSN");
-
-            builder.Property(e => e.PercICMSProprioST).HasColumnName("PERCICMSPROPRIOST");
-
-            builder.Property(e => e.PercMVAOriginal).HasColumnName("PERCMVAORIGINAL");
-
-            builder.Property(e => e.PercICMSInterna).HasColumnName("PERCICMSSTINTERNA");
-
-            builder.Property(e => e.PercReducaoBCST).HasColumnName("PERCREDUCAOBCST");
-
-            builder.Property(e => e.DescricaoCSOSN).HasColumnName("DESCRICAOCSOSN");
-
-            builder.Property(e => e.CodigoCSTOrigem).HasColumnName("CODIGOCSTORIGEM");
-
-            builder.Property(e => e.Origem).HasColumnName("ORIGEM");
-
-            builder.Property(e => e.PossuiICMSST).HasColumnName("POSSUIICMSST");
-
-            builder.Property(e => e.Isento).HasColumnName("ISENTO");
-
-            builder.Property(e => e.Tributado).HasColumnName("TRIBUTADO");
-
-            builder.Property(e => e.CodCSTOrigem).HasColumnName("CODCSTORIGEM");
-
-            builder.Property(e => e.MensagemFiscal).HasColumnName("MENSAGEMFISCAL");
-
-            builder.Property(e => e.CodTabelaPreco).HasColumnName("CODTABELAPRECO");
-
-            builder.Property(e => e.TabelaPreco).HasColumnName("TABELAPRECO");
-
-            builder.Property(e => e.CodVendedor).HasColumnName("CODVENDEDOR");
-
-            builder.Property(e => e.Vendedor).HasColumnName("VENDEDOR");
-
-            builder.Property(e => e.LimiteCredito).HasColumnName("LIMITECREDITO");
-
-            builder.Property(e => e.CodParcelaPredefinida).HasColumnName("CODPARCELAPREDEFINIDA");
-
-            builder.Property(e => e.ParcelaPredefinida).HasColumnName("PARCELAPREDEFINIDA");
-
-            builder.Property(e => e.CodTransportadora).HasColumnName("CODTRANSPORTADORA");
-
-            builder.Property(e => e.Transportadora).HasColumnName("TRANSPORTADORA");
-
-            builder.Property(e => e.ValorFrete).HasColumnName("VALORFRETE");
-
-            builder.Property(e => e.MD5O).HasColumnName("MD5O");
-
-            builder.Property(e => e.SUFRAMA).HasColumnName("SUFRAMA");
-
-            builder.Property(e => e.PercFCP).HasColumnName("PERCFCP");
-
-            builder.Property(e => e.PercReducaoBC).HasColumnName("PERCREDUCAOBC");
-
-            builder.Property(e => e.CSTCSOSNAplicar).HasColumnName("CSTCSOSNAPLICAR");
-
-            builder.Property(e => e.Sincronizado).HasColumnName("SINCRONIZADO");
-
-            builder.Property(e => e.UtilizarCashback).HasColumnName("UTILIZARCASHBACK");
         }
     }
 }
