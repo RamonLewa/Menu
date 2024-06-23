@@ -11,40 +11,37 @@ namespace Menu.Tables
 {
     public class TEstoque
     {
-        [DisplayName("Controle")]
+        [DisplayName("Código")]
         public int Controle { get; set; }
 
         [DisplayName("Produto")]
         public string Produto { get; set; }
 
-        [DisplayName("Tipo de Barras")]
-        public string TipoBarras { get; set; }
-
-        [DisplayName("Código de Barras")]
+        [DisplayName("Cód.barras")]
         public string CodBarras { get; set; }
+
+        [DisplayName("Referência")]
+        public string Referencia { get; set; }
 
         [DisplayName("Unidade")]
         public string Unidade { get; set; }
 
-        [DisplayName("Preço de Custo")]
+        [DisplayName("Preço de custo")]
         public decimal? PrecoCusto { get; set; }
 
-        [DisplayName("Percentual de Lucro")]
+        [DisplayName("Perc. lucro")]
         public decimal? PercLucro { get; set; }
 
-        [DisplayName("Preço de Venda")]
+        [DisplayName("Preço de venda")]
         public decimal? PrecoVenda { get; set; }
 
-        [DisplayName("Código do Grupo")]
+        [DisplayName("Cód. grupo")]
         public int? CodGrupo { get; set; }
 
         [DisplayName("Grupo")]
         public string Grupo { get; set; }
 
-        [DisplayName("Observações")]
-        public string Obs { get; set; }
-
-        [DisplayName("Código do Fornecedor")]
+        [DisplayName("Cód. fornecedor")]
         public int? CodFornecedor { get; set; }
 
         [DisplayName("Fornecedor")]
@@ -56,34 +53,28 @@ namespace Menu.Tables
         [DisplayName("Peso")]
         public decimal? Peso { get; set; }
 
-        [DisplayName("Custo Última Compra")]
-        public decimal? CustoUltimaCompra { get; set; }
-
-        [DisplayName("Custo Médio")]
-        public decimal? CustoMedio { get; set; }
-
-        [DisplayName("Quantidade Total Comprada")]
+        [DisplayName("Qtde total comprada")]
         public decimal? QtdeTotalComprada { get; set; }
 
-        [DisplayName("Quantidade Total Vendida")]
+        [DisplayName("Qtde total vendida")]
         public decimal? QtdeTotalVendida { get; set; }
 
-        [DisplayName("Data Última Compra")]
+        [DisplayName("Data última compra")]
         public DateTime? DataUltimaCompra { get; set; }
 
-        [DisplayName("Data Última Venda")]
+        [DisplayName("Data última venda")]
         public DateTime? DataUltimaVenda { get; set; }
 
-        [DisplayName("Data e Hora de Cadastro")]
+        [DisplayName("Data e hora cadastro")]
         public DateTime? DataHoraCadastro { get; set; }
 
-        [DisplayName("Quantidade Mínima")]
+        [DisplayName("Qtde mínima")]
         public int? QtdeMinima { get; set; }
 
-        [DisplayName("Quantidade Máxima")]
+        [DisplayName("Qtde máxima")]
         public int? QtdeMaxima { get; set; }
 
-        [DisplayName("Quantidade")]
+        [DisplayName("Qtde")]
         public int? Qtde { get; set; }
 
         [DisplayName("Ativo")]
@@ -92,52 +83,46 @@ namespace Menu.Tables
         [DisplayName("NCM")]
         public string NCM { get; set; }
 
-        [DisplayName("Percentual de Crédito ICMS")]
+        [DisplayName("Perc. crédito ICMS")]
         public decimal? PercCreditoICMS { get; set; }
 
-        [DisplayName("Usa Grade")]
+        [DisplayName("Usa grade")]
         public string UsaGrade { get; set; }
 
-        [DisplayName("Usa Serial")]
+        [DisplayName("Usa serial")]
         public string UsaSerial { get; set; }
 
         [DisplayName("Origem")]
         public string Origem { get; set; }
 
-        [DisplayName("Código Tributação IPI")]
+        [DisplayName("Cód. tributação IPI")]
         public string CodTributacaoIPI { get; set; }
 
         [DisplayName("Tributação IPI")]
         public string TributacaoIPI { get; set; }
 
-        [DisplayName("Código Tributação PIS")]
+        [DisplayName("Cód. tributação PIS")]
         public string CodTributacaoPIS { get; set; }
-
-        [DisplayName("Código Tributação COFINS")]
-        public string CodTributacaoCOFINS { get; set; }
 
         [DisplayName("Tributação PIS")]
         public string TributacaoPIS { get; set; }
 
+        [DisplayName("Cód. tributação COFINS")]
+        public string CodTributacaoCOFINS { get; set; }
+
         [DisplayName("Tributação COFINS")]
         public string TributacaoCOFINS { get; set; }
 
-        [DisplayName("Tipo de Tributação")]
+        [DisplayName("Tipo tributação")]
         public string TipoTributacao { get; set; }
 
-        [DisplayName("Percentual ICMS ST Interna")]
+        [DisplayName("Perc. ICMS interna")]
         public decimal? PercICMSSTInterna { get; set; }
 
-        [DisplayName("Percentual MVA Original")]
+        [DisplayName("Perc. MVA original")]
         public decimal? PercMVAOriginal { get; set; }
 
-        [DisplayName("Possui ICMS ST")]
-        public string PossuiICMSST { get; set; }
-
-        [DisplayName("Isento")]
-        public string Isento { get; set; }
-
-        [DisplayName("Percentual ICMS Próprio ST")]
+        [DisplayName("Perc. ICMS Próprio S.T")]
         public decimal? PercICMSProprioST { get; set; }
 
         [DisplayName("IAT")]
@@ -146,118 +131,103 @@ namespace Menu.Tables
         [DisplayName("IPPT")]
         public string IPPT { get; set; }
 
-        [DisplayName("Tributado")]
-        public string Tributado { get; set; }
-
-        [DisplayName("CSOSN")]
+        [DisplayName("CSOSN/CST")]
         public string CSOSN { get; set; }
 
-        [DisplayName("Descrição CSOSN")]
+        [DisplayName("Descrição CSOSN/CST")]
         public string DescricaoCSOSN { get; set; }
 
         [DisplayName("Pesado")]
         public string Pesado { get; set; }
 
-        [DisplayName("Base de Cálculo ICMS ST Retido")]
+        [DisplayName("Base de cálculo ICMS retido")]
         public decimal? BaseCalculoICMSSTRetido { get; set; }
 
-        [DisplayName("Valor ICMS ST Retido")]
+        [DisplayName("Valor ICMS retido")]
         public decimal? ValorICMSSTRetido { get; set; }
 
         [DisplayName("Alíquota ICMS ECF")]
         public decimal? AliquotaICMSECF { get; set; }
 
-        [DisplayName("Foto")]
-        public string Foto { get; set; }
-
-        [DisplayName("MD5")]
-        public string MD5 { get; set; }
-
-        [DisplayName("Mensagem NFe")]
+        [DisplayName("Mensagem NFE")]
         public string MensagemNFe { get; set; }
 
-        [DisplayName("Código Mensagem NFe")]
+        [DisplayName("Cód. mensagem NFE")]
         public int? CodMensagemNFe { get; set; }
 
-        [DisplayName("Código Unidade de Medida")]
+        [DisplayName("Cód. unidade de medida")]
         public int? CodUnidadeMedida { get; set; }
 
-        [DisplayName("Código Aplicação do Produto")]
+        [DisplayName("Cód. aplicação produto")]
         public int? CodAplicacaoProduto { get; set; }
 
-        [DisplayName("Aplicação do Produto")]
+        [DisplayName("Aplicação produto")]
         public string AplicacaoProduto { get; set; }
 
-        [DisplayName("MD5E2")]
-        public string MD5E2 { get; set; }
-
-        [DisplayName("Quantidade Inicial")]
+        [DisplayName("Qtde inicial")]
         public decimal? QtdeInicial { get; set; }
 
         [DisplayName("Alíquota ISS")]
         public decimal? AliquotaISS { get; set; }
 
-        [DisplayName("Código Imposto Médio")]
+        [DisplayName("Cód. imposto médio")]
         public int? CodImpostoMedio { get; set; }
 
-        [DisplayName("Percentual Imposto Médio")]
+        [DisplayName("Perc. imposto médio")]
         public decimal? PercImpostoMedio { get; set; }
 
-        [DisplayName("Cód CST Origem")]
+        [DisplayName("Cód. CST origem")]
         public string CodCSTOrigem { get; set; }
 
-        [DisplayName("Código CST Origem")]
-        public string CodigoCSTOrigem { get; set; }
-
-        [DisplayName("Código Emitente")]
+        [DisplayName("Cód. emitente")]
         public string CodEmitente { get; set; }
 
-        [DisplayName("Dias de Validade do Produto")]
+        [DisplayName("Validade produto")]
         public string DiasValidadeProduto { get; set; }
 
-        [DisplayName("Fator de Conversão")]
+        [DisplayName("Fator conversão")]
         public string FatorConversao { get; set; }
 
-        [DisplayName("Tributação do Serviço")]
+        [DisplayName("Tributação serviço")]
         public string TributacaoServico { get; set; }
 
-        [DisplayName("Redução Base Cálculo Serviço")]
+        [DisplayName("Redução base de cálculo serviço")]
         public string ReducaoBaseCalculoServico { get; set; }
 
         [DisplayName("Status")]
         public string Status { get; set; }
 
-        [DisplayName("Descrição Complementar")]
+        [DisplayName("Descrição complementar")]
         public string DescricaoComplementar { get; set; }
 
-        [DisplayName("Referência")]
-        public string Referencia { get; set; }
-
-        [DisplayName("Preço de Venda (USD)")]
+        [DisplayName("Preço de venda USS")]
         public decimal? PrecoVendaUSS { get; set; }
 
-        [DisplayName("Percentual Máximo de Desconto")]
+        [DisplayName("Perc. máximo desconto")]
         public decimal? PercMaximoDesconto { get; set; }
 
-        [DisplayName("Valor Comissão Fixo")]
+        [DisplayName("Valor comissão fixo")]
         public decimal? ValorComissaoFixo { get; set; }
 
-        [DisplayName("Percentual Comissão")]
+        [DisplayName("Perc. comissão")]
         public decimal? PercComissao { get; set; }
 
-        [DisplayName("Preço Mínimo (USD)")]
+        [DisplayName("Preço mínimo USS")]
         public decimal? PrecoMinimoUSS { get; set; }
 
-        [DisplayName("Preço Mínimo")]
+        [DisplayName("Preço mínimo")]
         public decimal? PrecoMinimo { get; set; }
 
-        [DisplayName("Código de Compra")]
+        [DisplayName("Cód. compra")]
         public string CodCompra { get; set; }
 
-        [DisplayName("Valor Frete")]
+        [DisplayName("Valor conversão")]
+        public string ValorConversao { get; set; }
+
+        [DisplayName("Valor frete")]
         public decimal? ValorFrete { get; set; }
 
-        [DisplayName("Valor Outros")]
+        [DisplayName("Valor outros")]
         public decimal? ValorOutros { get; set; }
 
         [DisplayName("Valor ICMS ST")]
@@ -266,17 +236,14 @@ namespace Menu.Tables
         [DisplayName("Valor IPI")]
         public decimal? ValorIPI { get; set; }
 
-        [DisplayName("Valor Unitário de Compra")]
+        [DisplayName("Valor unitário compra")]
         public decimal? ValorUnitarioCompra { get; set; }
 
-        [DisplayName("Percentual PIS")]
+        [DisplayName("Perc. PIS")]
         public decimal? PercPIS { get; set; }
 
-        [DisplayName("Percentual COFINS")]
+        [DisplayName("Perc. COFINS")]
         public string PercCOFINS { get; set; }
-
-        [DisplayName("Valor Conversão")]
-        public string ValorConversao { get; set; }
 
         [DisplayName("Campo 1")]
         public string Campo1 { get; set; }
@@ -308,86 +275,101 @@ namespace Menu.Tables
         [DisplayName("Campo 10")]
         public string Campo10 { get; set; }
 
-        [DisplayName("Código ANP")]
-        public string CodigoANP { get; set; }
-
         [DisplayName("Marca")]
         public string Marca { get; set; }
 
-        [DisplayName("Percentual Redução BC")]
+        [DisplayName("Perc. redução de B.C")]
         public decimal? PercReducaoBC { get; set; }
 
-        [DisplayName("Percentual Redução BC ST")]
+        [DisplayName("Perc. redução de B.C S.T")]
         public decimal? PercReducaoBCST { get; set; }
 
-        [DisplayName("Código Subgrupo")]
+        [DisplayName("Cód. subgrupo")]
         public string CodSubgrupo { get; set; }
 
         [DisplayName("Subgrupo")]
         public string Subgrupo { get; set; }
 
-        [DisplayName("Controlar Validade")]
+        [DisplayName("Controlar validade")]
         public string ControlarValidade { get; set; }
 
-        [DisplayName("Código Marca")]
+        [DisplayName("Cód. marca")]
         public string CodMarca { get; set; }
 
-        [DisplayName("Preço de Revenda")]
+        [DisplayName("Preço revenda")]
         public decimal? PrecoRevenda { get; set; }
 
-        [DisplayName("Percentual IPI")]
+        [DisplayName("Perc. IPI")]
         public decimal? PercIPI { get; set; }
 
         [DisplayName("CFOP")]
         public string CFOP { get; set; }
 
-        [DisplayName("Unidade Conversão Venda")]
+        [DisplayName("UN conversão venda")]
         public string UnidadeConversaoVenda { get; set; }
 
-        [DisplayName("Valor Conversão Venda")]
+        [DisplayName("Valor conversão venda")]
         public decimal? ValorConversaoVenda { get; set; }
 
-        [DisplayName("Código Tabela de Preço")]
+        [DisplayName("Cód. tabela preço")]
         public string CodTabelaPreco { get; set; }
 
-        [DisplayName("Nome Tabela de Preço")]
+        [DisplayName("Tabela preço")]
         public string NomeTabelaPreco { get; set; }
 
-        [DisplayName("Percentual Imposto Médio Estadual")]
+        [DisplayName("Perc. imposto estadual")]
         public decimal? PercImpostoMedioEstadual { get; set; }
 
-        [DisplayName("Percentual Imposto Médio Municipal")]
+        [DisplayName("Perc. imposto municipal")]
         public decimal? PercImpostoMedioMunicipal { get; set; }
 
-        [DisplayName("Código Enquadramento IPI")]
+        [DisplayName("Cód. enquadramento IPI")]
         public string CodigoEnquadramentoIPI { get; set; }
 
         [DisplayName("CEST")]
         public string CEST { get; set; }
 
-        [DisplayName("Quantidade em Produção")]
+        [DisplayName("Qtde em produção")]
         public decimal? QtdeEmProducao { get; set; }
 
-        [DisplayName("Quantidade Pedido de Venda")]
+        [DisplayName("Qtde pedido de venda")]
         public decimal? QtdePedidoVenda { get; set; }
 
-        [DisplayName("Quantidade Pedido de Compra")]
+        [DisplayName("Qtde pedido de compra")]
         public decimal? QtdePedidoCompra { get; set; }
 
-        [DisplayName("Quantidade Reservada")]
+        [DisplayName("Qtde reservada")]
         public decimal? QtdeReservada { get; set; }
 
-        [DisplayName("Quantidade Real")]
+        [DisplayName("Qtde real")]
         public decimal? QtdeReal { get; set; }
 
-        [DisplayName("Quantidade em Produção MP")]
+        [DisplayName("Qtde em produção MP")]
         public decimal? QtdeEmProducaoMP { get; set; }
 
-        [DisplayName("Unidade Medida Etiqueta")]
+        [DisplayName("Unidade medida etiqueta")]
         public string UnidadeMedidaEtiqueta { get; set; }
 
-        [DisplayName("Fator Conversão Etiqueta")]
+        [DisplayName("Fator conversão etiqueta")]
         public decimal? FatorConversaoEtiqueta { get; set; }
+
+        [DisplayName("Cód. ANP")]
+        public string CodigoANP { get; set; }
+
+        [DisplayName("Descrição ANP")]
+        public string DescricaoANP { get; set; }
+
+        [DisplayName("Perc. GLP")]
+        public decimal? PercGLPComb { get; set; }
+
+        [DisplayName("Perc. GNN")]
+        public decimal? PercGNNComb { get; set; }
+
+        [DisplayName("Perc. GNI")]
+        public decimal? PercGNIComb { get; set; }
+
+        [DisplayName("Valor partida")]
+        public decimal? ValorPartidaComb { get; set; }
 
         [DisplayName("Selo IPI")]
         public string SeloIPI { get; set; }
@@ -395,83 +377,62 @@ namespace Menu.Tables
         [DisplayName("Alíquota FCP")]
         public decimal? AliquotaFCP { get; set; }
 
-        [DisplayName("Percentual FCP ST")]
+        [DisplayName("% FCP")]
         public decimal? PercFCPST { get; set; }
 
-        [DisplayName("Descrição ANP")]
-        public string DescricaoANP { get; set; }
-
-        [DisplayName("Percentual GLP Combustível")]
-        public decimal? PercGLPComb { get; set; }
-
-        [DisplayName("Percentual GNN Combustível")]
-        public decimal? PercGNNComb { get; set; }
-
-        [DisplayName("Percentual GNI Combustível")]
-        public decimal? PercGNIComb { get; set; }
-
-        [DisplayName("Valor Partida Combustível")]
-        public decimal? ValorPartidaComb { get; set; }
-
-        [DisplayName("CNPJ Fabricante")]
+        [DisplayName("CNPJ fabricante")]
         public string CNPJFabricante { get; set; }
 
-        [DisplayName("Código Benefício Fiscal")]
+        [DisplayName("Cód. benefício fiscal")]
         public string CodigoBeneficioFiscal { get; set; }
 
-        [DisplayName("Código ANVISA")]
+        [DisplayName("Cód. ANVISA")]
         public string CodigoANVISA { get; set; }
 
-        [DisplayName("Código Unidade Tributável")]
+        [DisplayName("Cód. UN trib.")]
         public int? CodigoUnidadeTributavel { get; set; }
 
-        [DisplayName("Unidade Tributável")]
+        [DisplayName("UN trib")]
         public string UnidadeTributavel { get; set; }
 
-        [DisplayName("Quantidade Tributável")]
+        [DisplayName("Qtde trib.")]
         public decimal? QtdeTributavel { get; set; }
 
         [DisplayName("Desmontar na Venda")]
         public string DesmontarNaVenda { get; set; }
 
-        [DisplayName("Alíquota ICMS ST Ret")]
+        [DisplayName("Alíquota ICMS ST retido")]
         public decimal? AliquotaICMSSTRet { get; set; }
 
-        [DisplayName("Valor BC ICMS ST Ret")]
+        [DisplayName("Valor BC ICMS ST retido")]
         public decimal? ValorBCICMSSTRet { get; set; }
 
-        [DisplayName("Valor ICMS ST Ret")]
-        public decimal? ValorICMSSTRet { get; set; }
-
-        [DisplayName("Alíquota ICMS Efetiva")]
+        [DisplayName("Alíquota ICMS efetivo")]
         public decimal? AliquotaICMSEfet { get; set; }
 
-        [DisplayName("Percentual Redução ICMS Efet")]
+        [DisplayName("% ICMS efetivo")]
         public decimal? PercReducaoICMSEfet { get; set; }
 
-        [DisplayName("Valor BC ICMS Efetiva")]
+        [DisplayName("Valor BC ICMS efetivo")]
         public decimal? ValorBCICMSEfet { get; set; }
 
-        [DisplayName("Valor ICMS Efetivo")]
+        [DisplayName("Valor ICMS efetivo")]
         public decimal? ValorICMSEfet { get; set; }
 
-        [DisplayName("Valor ICMS Substituto")]
+        [DisplayName("Valor BC ICMS Substituto")]
         public decimal? ValorICMSSubstituto { get; set; }
 
-        [DisplayName("Código Barras Caixa")]
-        public string CodigoBarrasCaixa { get; set; }
+        [DisplayName("Valor ICMS ST retido")]
+        public decimal? ValorICMSSTRet { get; set; }
 
-        [DisplayName("Enviar Dados")]
-        public string EnviarDados { get; set; }
+        [DisplayName("Cód. barras caixa")]
+        public string CodigoBarrasCaixa { get; set; }
 
         [DisplayName("Valor PMC")]
         public decimal? ValorPMC { get; set; }
 
-        [DisplayName("MD5 Original")]
-        public string MD5O { get; set; }
-
-        [DisplayName("MD5 Substituto")]
-        public string MD5S { get; set; }
+        [DisplayName("Enviar Dados")]
+        public string EnviarDados { get; set; }
 
         [DisplayName("Valor FCP ST")]
         public decimal? ValorFCPST { get; set; }
@@ -479,30 +440,23 @@ namespace Menu.Tables
         [DisplayName("Localização")]
         public string Localizacao { get; set; }
 
-        [DisplayName("Volume")]
-        public decimal? Volume { get; set; }
-
-        [DisplayName("Mostrar na Cozinha")]
-        public string MostrarCozinha { get; set; }
-
-        [DisplayName("Código Barras Interno")]
+        [DisplayName("Cód. barras interno")]
         public string CodigoBarrasInterno { get; set; }
 
-        [DisplayName("Código Barras Tributável")]
+        [DisplayName("Cód. barras tributável")]
         public string CodigoBarrasTrib { get; set; }
 
         [DisplayName("Vacina")]
         public string Vacina { get; set; }
 
-        [DisplayName("Percentual Desconto Caixa")]
+        [DisplayName("% Desconto caixa")]
         public decimal? PercDescontoCaixa { get; set; }
 
-        [DisplayName("Sincronizado")]
-        public string Sincronizado { get; set; }
-
-        [DisplayName("Percentual Cashback")]
+        [DisplayName("Perc. cashback")]
         public decimal? PercCashback { get; set; }
 
+        [DisplayName("Tipo barra")]
+        public string TipoBarras { get; set; }
     }
 
     public class TEstoqueTypeConfiguration : IEntityTypeConfiguration<TEstoque>
@@ -517,9 +471,9 @@ namespace Menu.Tables
 
             builder.Property(e => e.Produto).HasColumnName("PRODUTO");
 
-            builder.Property(e => e.TipoBarras).HasColumnName("TIPOBARRA");
-
             builder.Property(e => e.CodBarras).HasColumnName("CODBARRAS");
+
+            builder.Property(e => e.Referencia).HasColumnName("REFERENCIA");
 
             builder.Property(e => e.Unidade).HasColumnName("UNIDADE");
 
@@ -533,8 +487,6 @@ namespace Menu.Tables
 
             builder.Property(e => e.Grupo).HasColumnName("GRUPO");
 
-            builder.Property(e => e.Obs).HasColumnName("OBS");
-
             builder.Property(e => e.CodFornecedor).HasColumnName("CODFORNECEDOR");
 
             builder.Property(e => e.Fornecedor).HasColumnName("FORNECEDOR");
@@ -542,10 +494,6 @@ namespace Menu.Tables
             builder.Property(e => e.Tamanho).HasColumnName("TAMANHO");
 
             builder.Property(e => e.Peso).HasColumnName("PESO");
-
-            builder.Property(e => e.CustoUltimaCompra).HasColumnName("CUSTOULTIMACOMPRA");
-
-            builder.Property(e => e.CustoMedio).HasColumnName("CUSTOMEDIO");
 
             builder.Property(e => e.QtdeTotalComprada).HasColumnName("QTDETOTALCOMPRADA");
 
@@ -581,9 +529,9 @@ namespace Menu.Tables
 
             builder.Property(e => e.CodTributacaoPIS).HasColumnName("CODTRIBUTACAOPIS");
 
-            builder.Property(e => e.CodTributacaoCOFINS).HasColumnName("CODTRIBUTACAOCOFINS");
-
             builder.Property(e => e.TributacaoPIS).HasColumnName("TRIBUTACAOPIS");
+
+            builder.Property(e => e.CodTributacaoCOFINS).HasColumnName("CODTRIBUTACAOCOFINS");
 
             builder.Property(e => e.TributacaoCOFINS).HasColumnName("TRIBUTACAOCOFINS");
 
@@ -593,17 +541,11 @@ namespace Menu.Tables
 
             builder.Property(e => e.PercMVAOriginal).HasColumnName("PERCMVAORIGINAL");
 
-            builder.Property(e => e.PossuiICMSST).HasColumnName("POSSUIICMSST");
-
-            builder.Property(e => e.Isento).HasColumnName("ISENTO");
-
             builder.Property(e => e.PercICMSProprioST).HasColumnName("PERCICMSPROPRIOST");
 
             builder.Property(e => e.IAT).HasColumnName("IAT");
 
             builder.Property(e => e.IPPT).HasColumnName("IPPT");
-
-            builder.Property(e => e.Tributado).HasColumnName("TRIBUTADO");
 
             builder.Property(e => e.CSOSN).HasColumnName("CSOSN");
 
@@ -617,10 +559,6 @@ namespace Menu.Tables
 
             builder.Property(e => e.AliquotaICMSECF).HasColumnName("ALIQUOTAICMSECF");
 
-            builder.Property(e => e.Foto).HasColumnName("FOTO");
-
-            builder.Property(e => e.MD5).HasColumnName("MD5");
-
             builder.Property(e => e.MensagemNFe).HasColumnName("MENSAGEMNFE");
 
             builder.Property(e => e.CodMensagemNFe).HasColumnName("CODMENSAGEMNFE");
@@ -631,8 +569,6 @@ namespace Menu.Tables
 
             builder.Property(e => e.AplicacaoProduto).HasColumnName("APLICACAOPRODUTO");
 
-            builder.Property(e => e.MD5E2).HasColumnName("MD5E2");
-
             builder.Property(e => e.QtdeInicial).HasColumnName("QTDEINICIAL");
 
             builder.Property(e => e.AliquotaISS).HasColumnName("ALIQUOTAISS");
@@ -642,8 +578,6 @@ namespace Menu.Tables
             builder.Property(e => e.PercImpostoMedio).HasColumnName("PERCIMPOSTOMEDIO");
 
             builder.Property(e => e.CodCSTOrigem).HasColumnName("CODCSTORIGEM");
-
-            builder.Property(e => e.CodigoCSTOrigem).HasColumnName("CODIGOCSTORIGEM");
 
             builder.Property(e => e.CodEmitente).HasColumnName("CODEMITENTE");
 
@@ -659,8 +593,6 @@ namespace Menu.Tables
 
             builder.Property(e => e.DescricaoComplementar).HasColumnName("DESCRICAOCOMPLEMENTAR");
 
-            builder.Property(e => e.Referencia).HasColumnName("REFERENCIA");
-
             builder.Property(e => e.PrecoVendaUSS).HasColumnName("PRECOVENDAUSS");
 
             builder.Property(e => e.PercMaximoDesconto).HasColumnName("PERCMAXIMODESCONTO");
@@ -675,6 +607,8 @@ namespace Menu.Tables
 
             builder.Property(e => e.CodCompra).HasColumnName("CODCOMPRA");
 
+            builder.Property(e => e.ValorConversao).HasColumnName("VALORCONVERSAO");
+
             builder.Property(e => e.ValorFrete).HasColumnName("VALORFRETE");
 
             builder.Property(e => e.ValorOutros).HasColumnName("VALOROUTROS");
@@ -688,8 +622,6 @@ namespace Menu.Tables
             builder.Property(e => e.PercPIS).HasColumnName("PERCPIS");
 
             builder.Property(e => e.PercCOFINS).HasColumnName("PERCCOFINS");
-
-            builder.Property(e => e.ValorConversao).HasColumnName("VALORCONVERSAO");
 
             builder.Property(e => e.Campo1).HasColumnName("CAMPO1");
 
@@ -710,8 +642,6 @@ namespace Menu.Tables
             builder.Property(e => e.Campo9).HasColumnName("CAMPO9");
 
             builder.Property(e => e.Campo10).HasColumnName("CAMPO10");
-
-            builder.Property(e => e.CodigoANP).HasColumnName("CODIGOANP");
 
             builder.Property(e => e.Marca).HasColumnName("MARCA");
 
@@ -765,11 +695,7 @@ namespace Menu.Tables
 
             builder.Property(e => e.FatorConversaoEtiqueta).HasColumnName("FATORCONVERSAOETIQUETA");
 
-            builder.Property(e => e.SeloIPI).HasColumnName("SELOIPI");
-
-            builder.Property(e => e.AliquotaFCP).HasColumnName("ALIQUOTAFCP");
-
-            builder.Property(e => e.PercFCPST).HasColumnName("PERCFCPST");
+            builder.Property(e => e.CodigoANP).HasColumnName("CODIGOANP");
 
             builder.Property(e => e.DescricaoANP).HasColumnName("DESCRICAOANP");
 
@@ -780,6 +706,12 @@ namespace Menu.Tables
             builder.Property(e => e.PercGNIComb).HasColumnName("PERCGNICOMB");
 
             builder.Property(e => e.ValorPartidaComb).HasColumnName("VALORPARTIDACOMB");
+
+            builder.Property(e => e.SeloIPI).HasColumnName("SELOIPI");
+
+            builder.Property(e => e.AliquotaFCP).HasColumnName("ALIQUOTAFCP");
+
+            builder.Property(e => e.PercFCPST).HasColumnName("PERCFCPST");
 
             builder.Property(e => e.CNPJFabricante).HasColumnName("CNPJFABRICANTE");
 
@@ -799,8 +731,6 @@ namespace Menu.Tables
 
             builder.Property(e => e.ValorBCICMSSTRet).HasColumnName("VALORBCICMSSTRET");
 
-            builder.Property(e => e.ValorICMSSTRet).HasColumnName("VALORICMSSTRET");
-
             builder.Property(e => e.AliquotaICMSEfet).HasColumnName("ALIQUOTAICMSEFET");
 
             builder.Property(e => e.PercReducaoICMSEfet).HasColumnName("PERCREDUCAOICMSEFET");
@@ -811,23 +741,17 @@ namespace Menu.Tables
 
             builder.Property(e => e.ValorICMSSubstituto).HasColumnName("VALORICMSSUBSTITUTO");
 
-            builder.Property(e => e.CodigoBarrasCaixa).HasColumnName("CODBARRASCAIXA");
+            builder.Property(e => e.ValorICMSSTRet).HasColumnName("VALORICMSSTRET");
 
-            builder.Property(e => e.EnviarDados).HasColumnName("ENVIARDADOS");
+            builder.Property(e => e.CodigoBarrasCaixa).HasColumnName("CODBARRASCAIXA");
 
             builder.Property(e => e.ValorPMC).HasColumnName("VALORPMC");
 
-            builder.Property(e => e.MD5O).HasColumnName("MD5O");
-
-            builder.Property(e => e.MD5S).HasColumnName("MD5S");
+            builder.Property(e => e.EnviarDados).HasColumnName("ENVIARDADOS");
 
             builder.Property(e => e.ValorFCPST).HasColumnName("VALORFCPST");
 
             builder.Property(e => e.Localizacao).HasColumnName("LOCALIZACAO");
-
-            builder.Property(e => e.Volume).HasColumnName("VOLUME");
-
-            builder.Property(e => e.MostrarCozinha).HasColumnName("MOSTRARCOZINHA");
 
             builder.Property(e => e.CodigoBarrasInterno).HasColumnName("CODBARRASINTERNO");
 
@@ -837,9 +761,9 @@ namespace Menu.Tables
 
             builder.Property(e => e.PercDescontoCaixa).HasColumnName("PERCDESCONTOCAIXA");
 
-            builder.Property(e => e.Sincronizado).HasColumnName("SINCRONIZADO");
-
             builder.Property(e => e.PercCashback).HasColumnName("PERCCASHBACK");
+
+            builder.Property(e => e.TipoBarras).HasColumnName("TIPOBARRA");
         }
     }
 }

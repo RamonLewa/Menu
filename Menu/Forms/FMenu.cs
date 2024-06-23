@@ -39,5 +39,36 @@ namespace Menu
             await fFornecedores.LoadDataAsync();
             fFornecedores.ShowDialog();
         }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private async void clientesCadastrosToolStripMenu_Click(object sender, EventArgs e)
+        {
+            var fClientes = new FClientes();
+            await fClientes.LoadDataAsync();
+            fClientes.ShowDialog();
+        }
+
+        private async void estoqueCadastrosToolStripMenu_Click(object sender, EventArgs e)
+        {
+            var fEstoque = new FEstoque();
+            await fEstoque.LoadDataAsync();
+            fEstoque.ShowDialog();
+        }
+
+        private async void fornecedoresCadastrosToolStripMenu_Click(object sender, EventArgs e)
+        {
+            var fFornecedores = new FFornecedores();
+            await fFornecedores.LoadDataAsync();
+            fFornecedores.ShowDialog();
+        }
+
+        private void sairCadastrosToolStripMenu_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

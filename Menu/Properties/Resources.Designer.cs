@@ -63,6 +63,16 @@ namespace Menu.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pessoa {
+            get {
+                object obj = ResourceManager.GetObject("pessoa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SGBr_junino24 {
             get {
                 object obj = ResourceManager.GetObject("SGBr_junino24", resourceCulture);

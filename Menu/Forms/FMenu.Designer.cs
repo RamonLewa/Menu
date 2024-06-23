@@ -29,23 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FMenu));
-            this.btnClientes = new System.Windows.Forms.Button();
             this.btnEstoque = new System.Windows.Forms.Button();
             this.btnFornecedores = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.cadastrosToolStripMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientesCadastrosToolStripMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.estoqueCadastrosToolStripMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.fornecedoresCadastrosToolStripMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.sairCadastrosToolStripMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.sairToolStripMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnClientes = new System.Windows.Forms.Button();
+            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnClientes
-            // 
-            this.btnClientes.Location = new System.Drawing.Point(12, 54);
-            this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(136, 63);
-            this.btnClientes.TabIndex = 0;
-            this.btnClientes.Text = "Clientes";
-            this.btnClientes.UseVisualStyleBackColor = true;
-            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // btnEstoque
             // 
@@ -70,11 +68,68 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(109)))), ((int)(((byte)(140)))));
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastrosToolStripMenu,
+            this.sairToolStripMenu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1904, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // cadastrosToolStripMenu
+            // 
+            this.cadastrosToolStripMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.clientesCadastrosToolStripMenu,
+            this.estoqueCadastrosToolStripMenu,
+            this.fornecedoresCadastrosToolStripMenu,
+            this.toolStripSeparator1,
+            this.sairCadastrosToolStripMenu});
+            this.cadastrosToolStripMenu.ForeColor = System.Drawing.SystemColors.Control;
+            this.cadastrosToolStripMenu.Name = "cadastrosToolStripMenu";
+            this.cadastrosToolStripMenu.Size = new System.Drawing.Size(71, 20);
+            this.cadastrosToolStripMenu.Text = "Cadastros";
+            // 
+            // clientesCadastrosToolStripMenu
+            // 
+            this.clientesCadastrosToolStripMenu.Name = "clientesCadastrosToolStripMenu";
+            this.clientesCadastrosToolStripMenu.Size = new System.Drawing.Size(145, 22);
+            this.clientesCadastrosToolStripMenu.Text = "Clientes";
+            this.clientesCadastrosToolStripMenu.Click += new System.EventHandler(this.clientesCadastrosToolStripMenu_Click);
+            // 
+            // estoqueCadastrosToolStripMenu
+            // 
+            this.estoqueCadastrosToolStripMenu.Name = "estoqueCadastrosToolStripMenu";
+            this.estoqueCadastrosToolStripMenu.Size = new System.Drawing.Size(145, 22);
+            this.estoqueCadastrosToolStripMenu.Text = "Estoque";
+            this.estoqueCadastrosToolStripMenu.Click += new System.EventHandler(this.estoqueCadastrosToolStripMenu_Click);
+            // 
+            // fornecedoresCadastrosToolStripMenu
+            // 
+            this.fornecedoresCadastrosToolStripMenu.Name = "fornecedoresCadastrosToolStripMenu";
+            this.fornecedoresCadastrosToolStripMenu.Size = new System.Drawing.Size(145, 22);
+            this.fornecedoresCadastrosToolStripMenu.Text = "Fornecedores";
+            this.fornecedoresCadastrosToolStripMenu.Click += new System.EventHandler(this.fornecedoresCadastrosToolStripMenu_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(142, 6);
+            // 
+            // sairCadastrosToolStripMenu
+            // 
+            this.sairCadastrosToolStripMenu.Name = "sairCadastrosToolStripMenu";
+            this.sairCadastrosToolStripMenu.Size = new System.Drawing.Size(145, 22);
+            this.sairCadastrosToolStripMenu.Text = "Sair";
+            this.sairCadastrosToolStripMenu.Click += new System.EventHandler(this.sairCadastrosToolStripMenu_Click);
+            // 
+            // sairToolStripMenu
+            // 
+            this.sairToolStripMenu.ForeColor = System.Drawing.SystemColors.Control;
+            this.sairToolStripMenu.Name = "sairToolStripMenu";
+            this.sairToolStripMenu.Size = new System.Drawing.Size(38, 20);
+            this.sairToolStripMenu.Text = "Sair";
+            this.sairToolStripMenu.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -84,6 +139,18 @@
             this.pictureBox1.Size = new System.Drawing.Size(155, 74);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnClientes
+            // 
+            this.btnClientes.FlatAppearance.BorderSize = 0;
+            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClientes.Image = global::Menu.Properties.Resources.pessoa;
+            this.btnClientes.Location = new System.Drawing.Point(12, 35);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Size = new System.Drawing.Size(55, 55);
+            this.btnClientes.TabIndex = 0;
+            this.btnClientes.UseVisualStyleBackColor = true;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // FMenu
             // 
@@ -104,6 +171,8 @@
             this.Name = "FMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Menu | |";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -117,6 +186,13 @@
         private System.Windows.Forms.Button btnFornecedores;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem cadastrosToolStripMenu;
+        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenu;
+        private System.Windows.Forms.ToolStripMenuItem clientesCadastrosToolStripMenu;
+        private System.Windows.Forms.ToolStripMenuItem estoqueCadastrosToolStripMenu;
+        private System.Windows.Forms.ToolStripMenuItem fornecedoresCadastrosToolStripMenu;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem sairCadastrosToolStripMenu;
     }
 }
 
