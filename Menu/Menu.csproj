@@ -173,7 +173,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\DataContext.cs" />
-    <Compile Include="Classes\Planilhas.cs" />
+    <Compile Include="Classes\ImportPlanilhas.cs" />
+    <Compile Include="Classes\ExportPlanilhas.cs" />
     <Compile Include="Forms\FClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -250,6 +251,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pessoa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caixa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homem-gravata.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

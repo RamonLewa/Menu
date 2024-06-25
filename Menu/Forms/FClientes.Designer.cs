@@ -54,13 +54,13 @@
             this.toolStripSeparator1,
             this.importarClientes});
             this.ContextMenuClientes.Name = "ContextMenuClientes";
-            this.ContextMenuClientes.Size = new System.Drawing.Size(184, 76);
+            this.ContextMenuClientes.Size = new System.Drawing.Size(190, 54);
             // 
             // exportarClientes
             // 
             this.exportarClientes.Name = "exportarClientes";
-            this.exportarClientes.Size = new System.Drawing.Size(183, 22);
-            this.exportarClientes.Text = "Exportar clientes .xls";
+            this.exportarClientes.Size = new System.Drawing.Size(189, 22);
+            this.exportarClientes.Text = "Exportar clientes .xlsx";
             this.exportarClientes.Click += new System.EventHandler(this.exportarClientes_Click);
             // 
             // toolStripSeparator1
@@ -71,8 +71,8 @@
             // importarClientes
             // 
             this.importarClientes.Name = "importarClientes";
-            this.importarClientes.Size = new System.Drawing.Size(183, 22);
-            this.importarClientes.Text = "Importar clientes .xls";
+            this.importarClientes.Size = new System.Drawing.Size(189, 22);
+            this.importarClientes.Text = "Importar clientes .xlsx";
             this.importarClientes.Click += new System.EventHandler(this.importarClientes_Click);
             // 
             // FClientes
@@ -83,7 +83,6 @@
             this.Controls.Add(this.DataGridClientes);
             this.Name = "FClientes";
             this.Text = "Clientes";
-            this.Load += new System.EventHandler(this.FClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridClientes)).EndInit();
             this.ContextMenuClientes.ResumeLayout(false);
             this.ResumeLayout(false);

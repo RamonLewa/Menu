@@ -11,11 +11,12 @@ using System.Windows.Forms;
 
 namespace Menu
 {
-    public partial class FMenu : Form
+    public partial class FMenu : SGForm
     {
         public FMenu()
         {
             InitializeComponent();
+            FullWidthScreen();
         }
 
         private async void btnClientes_Click(object sender, EventArgs e)

@@ -21,11 +21,6 @@ namespace Menu.Forms
         public FEstoque()
         {
             InitializeComponent();
-            this.Load += new EventHandler(FEstoque_Load);
-        }
-        private async void FEstoque_Load(object sender, EventArgs e)
-        {
-            await LoadDataAsync();
         }
 
         public async Task LoadDataAsync()
@@ -34,7 +29,6 @@ namespace Menu.Forms
 
             using (var context = new DataContext())
             {
-                // Carregar dados assincronamente e paralelamente
                 estoque = await Task.Run(() =>
                 {
                     return context.TEstoque
@@ -44,15 +38,7 @@ namespace Menu.Forms
                 });
             }
 
-            // Atualizar DataGridView na thread da UI
             dataGridEstoque.DataSource = estoque;
-        }
-
-        public static async Task<FEstoque> CreateAndLoadAsync()
-        {
-            var form = new FEstoque();
-            await form.LoadDataAsync();
-            return form;
         }
     }
 }

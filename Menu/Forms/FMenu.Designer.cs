@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FMenu));
-            this.btnEstoque = new System.Windows.Forms.Button();
             this.btnFornecedores = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastrosToolStripMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,28 +39,21 @@
             this.sairCadastrosToolStripMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnEstoque = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnEstoque
-            // 
-            this.btnEstoque.Location = new System.Drawing.Point(169, 61);
-            this.btnEstoque.Name = "btnEstoque";
-            this.btnEstoque.Size = new System.Drawing.Size(134, 48);
-            this.btnEstoque.TabIndex = 1;
-            this.btnEstoque.Text = "Estoque";
-            this.btnEstoque.UseVisualStyleBackColor = true;
-            this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click);
-            // 
             // btnFornecedores
             // 
-            this.btnFornecedores.Location = new System.Drawing.Point(324, 61);
+            this.btnFornecedores.FlatAppearance.BorderSize = 0;
+            this.btnFornecedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFornecedores.Image = global::Menu.Properties.Resources.homem_gravata;
+            this.btnFornecedores.Location = new System.Drawing.Point(161, 35);
             this.btnFornecedores.Name = "btnFornecedores";
-            this.btnFornecedores.Size = new System.Drawing.Size(109, 48);
+            this.btnFornecedores.Size = new System.Drawing.Size(55, 55);
             this.btnFornecedores.TabIndex = 2;
-            this.btnFornecedores.Text = "Fornecedores";
             this.btnFornecedores.UseVisualStyleBackColor = true;
             this.btnFornecedores.Click += new System.EventHandler(this.btnFornecedores_Click);
             // 
@@ -134,11 +126,23 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Menu.Properties.Resources.SGBr_junino24;
-            this.pictureBox1.Location = new System.Drawing.Point(1727, 35);
+            this.pictureBox1.Location = new System.Drawing.Point(1737, 35);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(155, 74);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnEstoque
+            // 
+            this.btnEstoque.FlatAppearance.BorderSize = 0;
+            this.btnEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEstoque.Image = global::Menu.Properties.Resources.caixa;
+            this.btnEstoque.Location = new System.Drawing.Point(86, 35);
+            this.btnEstoque.Name = "btnEstoque";
+            this.btnEstoque.Size = new System.Drawing.Size(55, 55);
+            this.btnEstoque.TabIndex = 1;
+            this.btnEstoque.UseVisualStyleBackColor = true;
+            this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click);
             // 
             // btnClientes
             // 
@@ -169,7 +173,6 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "FMenu";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Menu | |";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

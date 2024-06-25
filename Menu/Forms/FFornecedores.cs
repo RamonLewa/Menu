@@ -20,12 +20,6 @@ namespace Menu.Forms
         public FFornecedores()
         {
             InitializeComponent();
-            this.Load += new EventHandler(FFornecedores_Load);
-        }
-
-        private async void FFornecedores_Load(object sender, EventArgs e)
-        {
-            await LoadDataAsync();
         }
 
         public async Task LoadDataAsync()
@@ -34,7 +28,6 @@ namespace Menu.Forms
 
             using (var context = new DataContext())
             {
-                // Carregar dados assincronamente e paralelamente
                 fornecedores = await Task.Run(() =>
                 {
                     return context.TFornecedor
@@ -44,15 +37,29 @@ namespace Menu.Forms
                 });
             }
 
-            // Atualizar DataGridView na thread da UI
             dataGridFornecedores.DataSource = fornecedores;
         }
 
-        public static async Task<FFornecedores> CreateAndLoadAsync()
+        private void dataGridFornecedores_MouseDown(object sender, MouseEventArgs e)
         {
-            var form = new FFornecedores();
-            await form.LoadDataAsync();
-            return form;
+            if (e.Button == MouseButtons.Right)
+            {
+                var hitTestInfo = dataGridFornecedores.HitTest(e.X, e.Y);
+
+                if (hitTestInfo.RowIndex >= 0 && hitTestInfo.ColumnIndex >= 0)
+                {
+                    dataGridFornecedores.ClearSelection();
+                    dataGridFornecedores.Rows[hitTestInfo.RowIndex].Cells[hitTestInfo.ColumnIndex].Selected = true;
+
+                    contextMenuFornecedores.Show(dataGridFornecedores, new Point(e.X, e.Y));
+                }
+            }
+        }
+
+        private void exportarFornecedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExportarPlanilhaFornecedores planilha = new ExportarPlanilhaFornecedores();
+            planilha.CreateExcelFile();
         }
     }
 }

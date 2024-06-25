@@ -35,9 +35,9 @@
             // dataGridEstoque
             // 
             this.dataGridEstoque.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridEstoque.Location = new System.Drawing.Point(12, 12);
+            this.dataGridEstoque.Location = new System.Drawing.Point(12, 104);
             this.dataGridEstoque.Name = "dataGridEstoque";
-            this.dataGridEstoque.Size = new System.Drawing.Size(776, 426);
+            this.dataGridEstoque.Size = new System.Drawing.Size(776, 334);
             this.dataGridEstoque.TabIndex = 0;
             // 
             // FEstoque
@@ -48,7 +48,6 @@
             this.Controls.Add(this.dataGridEstoque);
             this.Name = "FEstoque";
             this.Text = "FEstoque";
-            this.Load += new System.EventHandler(this.FEstoque_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEstoque)).EndInit();
             this.ResumeLayout(false);
 

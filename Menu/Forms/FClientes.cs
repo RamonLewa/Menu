@@ -21,12 +21,6 @@ namespace Menu.Forms
         public FClientes()
         {
             InitializeComponent();
-            this.Load += new EventHandler(FClientes_Load);
-        }
-
-        private void FClientes_Load(object sender, EventArgs e)
-        {
-             
         }
 
         public async Task LoadDataAsync()

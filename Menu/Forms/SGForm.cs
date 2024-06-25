@@ -28,22 +28,15 @@ namespace Menu.Forms
         public SGForm()
         {
             InitializeComponent();
-            SetFormFullScreenWidth();
+            FullWidthScreen();
         }
 
-        private void SetFormFullScreenWidth()
+        public void FullWidthScreen()
         {
-            // Obter a largura da tela do monitor principal
             int screenWidth = Screen.PrimaryScreen.Bounds.Width;
-
-            // Definir a largura do formulário
-            this.Width = screenWidth;
-
-            // Manter a altura padrão do formulário ou definir uma altura desejada
-            this.Height = 600; // Por exemplo, 600 pixels
-
-            // Centralizar o formulário na tela
-            this.StartPosition = FormStartPosition.CenterScreen;
+            this.Width = screenWidth + 16;
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new System.Drawing.Point(-8, 0);
         }
     }
 }
