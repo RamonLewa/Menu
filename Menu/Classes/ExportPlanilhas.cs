@@ -266,4 +266,126 @@ namespace Menu.Classes
             }
         }
     }
+    public class ExportarPlanilhaEstoque
+    {
+        public void CreateExcelFile()
+        {
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
+            using (var context = new DataContext())
+            {
+                List<TEstoque> clientes = context.TEstoque.ToList();
+                using (var package = new ExcelPackage())
+                {
+                    var worksheet = package.Workbook.Worksheets.Add("Planilha produtos");
+
+                    worksheet.Cells[1, 1].Value = "Código";
+                    worksheet.Cells[1, 1].Value = "Produto";
+                    worksheet.Cells[1, 1].Value = "Cód. barras";
+                    worksheet.Cells[1, 1].Value = "Referência";
+                    worksheet.Cells[1, 1].Value = "Unidade";
+                    worksheet.Cells[1, 1].Value = "Preço de custo";
+                    worksheet.Cells[1, 1].Value = "Perc. lucro";
+                    worksheet.Cells[1, 1].Value = "Preço de venda";
+                    worksheet.Cells[1, 1].Value = "Cód. grupo";
+                    worksheet.Cells[1, 1].Value = "Grupo";
+                    worksheet.Cells[1, 1].Value = "Cód. fornecedor";
+                    worksheet.Cells[1, 1].Value = "Fornecedor";
+                    worksheet.Cells[1, 1].Value = "Tamanho";
+                    worksheet.Cells[1, 1].Value = "Peso";
+                    worksheet.Cells[1, 1].Value = "Qtde total comprada";
+                    worksheet.Cells[1, 1].Value = "Qtde total vendida";
+                    worksheet.Cells[1, 1].Value = "Data última compra";
+                    worksheet.Cells[1, 1].Value = "Data última venda";
+                    worksheet.Cells[1, 1].Value = "Data e hora cadastro";
+                    worksheet.Cells[1, 1].Value = "Qtde mínima";
+                    worksheet.Cells[1, 1].Value = "Qtde máxima";
+                    worksheet.Cells[1, 1].Value = "Qtde";
+                    worksheet.Cells[1, 1].Value = "Ativo";
+                    worksheet.Cells[1, 1].Value = "NCM";
+                    worksheet.Cells[1, 1].Value = "Perc. crédito ICMS";
+                    worksheet.Cells[1, 1].Value = "Usa grade";
+                    worksheet.Cells[1, 1].Value = "Usa serial";
+                    worksheet.Cells[1, 1].Value = "Origem";
+                    worksheet.Cells[1, 1].Value = "Cód. tributação IPI";
+                    worksheet.Cells[1, 1].Value = "Tributação IPI";
+                    worksheet.Cells[1, 1].Value = "Cód. tributação PIS";
+                    worksheet.Cells[1, 1].Value = "Tributação PIS";
+                    worksheet.Cells[1, 1].Value = "Cód. tributação COFINS";
+                    worksheet.Cells[1, 1].Value = "Tributação COFINS";
+                    worksheet.Cells[1, 1].Value = "Tipo tributação";
+                    worksheet.Cells[1, 1].Value = "Perc. ICMS interna";
+                    worksheet.Cells[1, 1].Value = "Perc. MVA original";
+                    worksheet.Cells[1, 1].Value = "Perc. ICMS próprio S.T";
+                    worksheet.Cells[1, 1].Value = "IAT";
+                    worksheet.Cells[1, 1].Value = "IPPT";
+                    worksheet.Cells[1, 1].Value = "CSOSN/CST";
+                    worksheet.Cells[1, 1].Value = "Descrição CSOSN/CST";
+                    worksheet.Cells[1, 1].Value = "Pesado";
+                    worksheet.Cells[1, 1].Value = "Base de cálculo ICMS retido";
+                    worksheet.Cells[1, 1].Value = "Valor ICMS retido";
+                    worksheet.Cells[1, 1].Value = "Alíquota ICMS ECF";
+                    worksheet.Cells[1, 1].Value = "Mensagem NFE";
+                    worksheet.Cells[1, 1].Value = "Cód. unidade de medida";
+                    worksheet.Cells[1, 1].Value = "Cód. aplicação produto";
+                    worksheet.Cells[1, 1].Value = "Aplicação produto";
+                    worksheet.Cells[1, 1].Value = "Qtde inicial";
+                    worksheet.Cells[1, 1].Value = "Alíquota ISS";
+                    worksheet.Cells[1, 1].Value = "Cód. imposto médio";
+                    worksheet.Cells[1, 1].Value = "Perc. imposto médio";
+                    worksheet.Cells[1, 1].Value = "Cód. CST origem";
+                    worksheet.Cells[1, 1].Value = "Código CST origem";
+                    worksheet.Cells[1, 1].Value = "Cód. emitente";
+                    worksheet.Cells[1, 1].Value = "Validade produto";
+                    worksheet.Cells[1, 1].Value = "Fator conversão";
+                    worksheet.Cells[1, 1].Value = "Tributação serviço";
+                    worksheet.Cells[1, 1].Value = "Redução base de cálculo serviço";
+                    worksheet.Cells[1, 1].Value = "Status";
+                    worksheet.Cells[1, 1].Value = "Descrição complementar";
+                    worksheet.Cells[1, 1].Value = "Preço de venda USS";
+                    worksheet.Cells[1, 1].Value = "Perc. máximo desconto";
+                    worksheet.Cells[1, 1].Value = "Valor comissão fixo";
+                    worksheet.Cells[1, 1].Value = "Preço mínimo USS";
+                    worksheet.Cells[1, 1].Value = "Preço mínimo";
+                    worksheet.Cells[1, 1].Value = "Cód. compra";
+                    worksheet.Cells[1, 1].Value = "Valor conversão";
+                    worksheet.Cells[1, 1].Value = "Valor frete";
+                    worksheet.Cells[1, 1].Value = "Valor outros";
+                    worksheet.Cells[1, 1].Value = "Valor ICMS ST";
+                    worksheet.Cells[1, 1].Value = "Valor IPI";
+                    worksheet.Cells[1, 1].Value = "Valor unitário compra";
+                    worksheet.Cells[1, 1].Value = "Perc. PIS";
+                    worksheet.Cells[1, 1].Value = "Perc. COFINS";
+                    worksheet.Cells[1, 1].Value = "CAMPO1";
+                    worksheet.Cells[1, 1].Value = "CAMPO2";
+                    worksheet.Cells[1, 1].Value = "CAMPO3";
+                    worksheet.Cells[1, 1].Value = "CAMPO4";
+                    worksheet.Cells[1, 1].Value = "CAMPO5";
+                    worksheet.Cells[1, 1].Value = "CAMPO6";
+                    worksheet.Cells[1, 1].Value = "CAMPO7";
+                    worksheet.Cells[1, 1].Value = "CAMPO8";
+                    worksheet.Cells[1, 1].Value = "CAMPO9";
+                    worksheet.Cells[1, 1].Value = "CAMPO10";
+
+                    for (int i = 0; i < clientes.Count; i++)
+                    {
+                        worksheet.Cells[i + 2, 1].Value = clientes[i].Controle;
+                    }
+
+                    SaveFileDialog saveFileDialog = new SaveFileDialog();
+                    saveFileDialog.Filter = "Planilha Excel|*.xlsx";
+                    saveFileDialog.Title = "Salvar Planilha Produtos";
+                    saveFileDialog.FileName = "Produtos";
+                    saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        string caminhoArquivo = saveFileDialog.FileName;
+                        package.SaveAs(caminhoArquivo);
+                        MessageBox.Show("Arquivo gerado com sucesso!");
+                    }
+                }
+            }
+        }
+    }
 }
