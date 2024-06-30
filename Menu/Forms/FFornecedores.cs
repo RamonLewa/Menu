@@ -33,6 +33,7 @@ namespace Menu.Forms
                     return context.TFornecedor
                                   .AsParallel()
                                   .WithDegreeOfParallelism(Environment.ProcessorCount)
+                                  .OrderBy(cli => cli.Controle)
                                   .ToList();
                 });
             }
@@ -56,10 +57,10 @@ namespace Menu.Forms
             }
         }
 
-        private void exportarFornecedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        private void exportarFornecedores_Click(object sender, EventArgs e)
         {
-            ExportarPlanilhaFornecedores planilha = new ExportarPlanilhaFornecedores();
-            planilha.CreateExcelFile();
+            FExportaFornecedores fExportaFornecedores = new FExportaFornecedores();
+            fExportaFornecedores.ShowDialog();
         }
     }
 }

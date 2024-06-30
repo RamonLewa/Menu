@@ -19,7 +19,7 @@ namespace Menu
         {
             InitializeComponent();
             FullWidthScreen();
-            timer1.Interval = 100; // Intervalo em milissegundos
+            timer1.Interval = 100;
             timer1.Start();
         }
 
@@ -78,16 +78,13 @@ namespace Menu
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            // Move o Label para a esquerda
             xOffset -= 5;
 
-            // Reinicia a posição se o texto sair da tela à esquerda
             if (xOffset < -lblTextoMenu.Width)
             {
                 xOffset = this.Width;
             }
 
-            // Atualiza a localização do Label
             lblTextoMenu.Location = new Point(xOffset, lblTextoMenu.Location.Y);
         }
     }

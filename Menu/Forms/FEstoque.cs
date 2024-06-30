@@ -34,11 +34,34 @@ namespace Menu.Forms
                     return context.TEstoque
                                   .AsParallel()
                                   .WithDegreeOfParallelism(Environment.ProcessorCount)
+                                  .OrderBy(est => est.Controle)
                                   .ToList();
                 });
             }
 
             dataGridEstoque.DataSource = estoque;
+        }
+
+        private void dataGridEstoque_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                var hitTestInfo = dataGridEstoque.HitTest(e.X, e.Y);
+
+                if (hitTestInfo.RowIndex >= 0 && hitTestInfo.ColumnIndex >= 0)
+                {
+                    dataGridEstoque.ClearSelection();
+                    dataGridEstoque.Rows[hitTestInfo.RowIndex].Cells[hitTestInfo.ColumnIndex].Selected = true;
+
+                    contextMenuEstoque.Show(dataGridEstoque, new Point(e.X, e.Y));
+                }
+            }
+        }
+
+        private void exportarEstoque_Click(object sender, EventArgs e)
+        {
+            FExportaEstoque fExportaEstoque = new FExportaEstoque();
+            fExportaEstoque.ShowDialog();
         }
     }
 }

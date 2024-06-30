@@ -31,7 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.dataGridFornecedores = new System.Windows.Forms.DataGridView();
             this.contextMenuFornecedores = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.exportarFornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportarFornecedores = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.importarFornecedores = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridFornecedores)).BeginInit();
             this.contextMenuFornecedores.SuspendLayout();
             this.SuspendLayout();
@@ -48,16 +50,29 @@
             // contextMenuFornecedores
             // 
             this.contextMenuFornecedores.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exportarFornecedoresToolStripMenuItem});
+            this.exportarFornecedores,
+            this.toolStripSeparator1,
+            this.importarFornecedores});
             this.contextMenuFornecedores.Name = "contextMenuFornecedores";
-            this.contextMenuFornecedores.Size = new System.Drawing.Size(217, 48);
+            this.contextMenuFornecedores.Size = new System.Drawing.Size(219, 76);
             // 
-            // exportarFornecedoresToolStripMenuItem
+            // exportarFornecedores
             // 
-            this.exportarFornecedoresToolStripMenuItem.Name = "exportarFornecedoresToolStripMenuItem";
-            this.exportarFornecedoresToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
-            this.exportarFornecedoresToolStripMenuItem.Text = "Exportar fornecedores .xlsx";
-            this.exportarFornecedoresToolStripMenuItem.Click += new System.EventHandler(this.exportarFornecedoresToolStripMenuItem_Click);
+            this.exportarFornecedores.Name = "exportarFornecedores";
+            this.exportarFornecedores.Size = new System.Drawing.Size(218, 22);
+            this.exportarFornecedores.Text = "Exportar fornecedores .xlsx";
+            this.exportarFornecedores.Click += new System.EventHandler(this.exportarFornecedores_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(215, 6);
+            // 
+            // importarFornecedores
+            // 
+            this.importarFornecedores.Name = "importarFornecedores";
+            this.importarFornecedores.Size = new System.Drawing.Size(218, 22);
+            this.importarFornecedores.Text = "Importar fornecedores .xlsx";
             // 
             // FFornecedores
             // 
@@ -77,6 +92,8 @@
 
         private System.Windows.Forms.DataGridView dataGridFornecedores;
         private System.Windows.Forms.ContextMenuStrip contextMenuFornecedores;
-        private System.Windows.Forms.ToolStripMenuItem exportarFornecedoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exportarFornecedores;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem importarFornecedores;
     }
 }

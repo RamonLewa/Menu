@@ -28,8 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridEstoque = new System.Windows.Forms.DataGridView();
+            this.contextMenuEstoque = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.exportarEstoque = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.importarEstoque = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEstoque)).BeginInit();
+            this.contextMenuEstoque.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridEstoque
@@ -39,6 +45,34 @@
             this.dataGridEstoque.Name = "dataGridEstoque";
             this.dataGridEstoque.Size = new System.Drawing.Size(776, 334);
             this.dataGridEstoque.TabIndex = 0;
+            this.dataGridEstoque.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridEstoque_MouseDown);
+            // 
+            // contextMenuEstoque
+            // 
+            this.contextMenuEstoque.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exportarEstoque,
+            this.toolStripSeparator1,
+            this.importarEstoque});
+            this.contextMenuEstoque.Name = "contextMenuEstoque";
+            this.contextMenuEstoque.Size = new System.Drawing.Size(192, 76);
+            // 
+            // exportarEstoque
+            // 
+            this.exportarEstoque.Name = "exportarEstoque";
+            this.exportarEstoque.Size = new System.Drawing.Size(191, 22);
+            this.exportarEstoque.Text = "Exportar estoque .xlsx";
+            this.exportarEstoque.Click += new System.EventHandler(this.exportarEstoque_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(188, 6);
+            // 
+            // importarEstoque
+            // 
+            this.importarEstoque.Name = "importarEstoque";
+            this.importarEstoque.Size = new System.Drawing.Size(191, 22);
+            this.importarEstoque.Text = "Importar estoque .xlsx";
             // 
             // FEstoque
             // 
@@ -49,6 +83,7 @@
             this.Name = "FEstoque";
             this.Text = "FEstoque";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEstoque)).EndInit();
+            this.contextMenuEstoque.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -56,5 +91,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridEstoque;
+        private System.Windows.Forms.ContextMenuStrip contextMenuEstoque;
+        private System.Windows.Forms.ToolStripMenuItem exportarEstoque;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem importarEstoque;
     }
 }

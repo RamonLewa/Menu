@@ -89,3 +89,5 @@ C:\Users\ramon\source\repos\Menu\Menu\obj\Debug\Menu.Forms.FEstoque.resources
 C:\Users\ramon\source\repos\Menu\Menu\obj\Debug\Menu.Forms.FFornecedores.resources
 C:\Users\ramon\source\repos\Menu\Menu\obj\Debug\Menu.Forms.FExportaClientes.resources
 C:\Users\ramon\source\repos\Menu\Menu\obj\Debug\Menu.Forms.SGForm.resources
+C:\Users\ramon\source\repos\Menu\Menu\obj\Debug\Menu.Forms.FExportaFornecedores.resources
+C:\Users\ramon\source\repos\Menu\Menu\obj\Debug\Menu.Forms.FExportaEstoque.resources

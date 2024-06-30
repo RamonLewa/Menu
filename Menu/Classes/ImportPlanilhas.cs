@@ -56,11 +56,9 @@ namespace Menu.Classes
                             Ativo = "SIM",
                         };
 
-                        // Adiciona o cliente à lista
                         clientes.Add(cliente);
                     }
 
-                    // Salva a lista de clientes no banco de dados
                     using (var context = new DataContext())
                     {
                         context.TCliente.AddRange(clientes);
@@ -71,7 +69,6 @@ namespace Menu.Classes
                 }
             }
         }
-        // Método para truncar strings que excedem o comprimento máximo permitido
         private string Truncate(string value, int maxLength)
         {
             if (string.IsNullOrEmpty(value)) return value;

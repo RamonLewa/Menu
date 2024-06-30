@@ -11,29 +11,29 @@ using System.Windows.Forms;
 
 namespace Menu.Forms
 {
-    public partial class FExportaClientes : SGForm
+    public partial class FExportaFornecedores : SGForm
     {
-        public FExportaClientes()
+        public FExportaFornecedores()
         {
             InitializeComponent();
             comboBoxFiltro.SelectedIndex = 0;
         }
 
-        private void checkBoxSelecionarTodosClientes_CheckedChanged(object sender, EventArgs e)
+        private void checkBoxSelecionarTodosForn_CheckedChanged(object sender, EventArgs e)
         {
-            bool checkAll = checkBoxSelecionarTodosClientes.Checked;
+            bool checkAll = checkBoxSelecionarTodosForn.Checked;
 
-            for (int i = 0; i < checkedListClientes.Items.Count; i++)
+            for (int i = 0; i < checkedListFornecedores.Items.Count; i++)
             {
-                checkedListClientes.SetItemChecked(i, checkAll);
+                checkedListFornecedores.SetItemChecked(i, checkAll);
             }
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             var filtro = comboBoxFiltro.SelectedItem.ToString();
-            ExportarPlanilhaClientes ex = new ExportarPlanilhaClientes();
-            ex.CreateExcelFile(checkedListClientes.CheckedItems, filtro);
+            ExportarPlanilhaFornecedores ex = new ExportarPlanilhaFornecedores();
+            ex.CreateExcelFile(checkedListFornecedores.CheckedItems, filtro);
         }
     }
 }
