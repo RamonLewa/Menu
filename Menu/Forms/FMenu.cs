@@ -13,10 +13,14 @@ namespace Menu
 {
     public partial class FMenu : SGForm
     {
+        private int xOffset;
+
         public FMenu()
         {
             InitializeComponent();
             FullWidthScreen();
+            timer1.Interval = 100; // Intervalo em milissegundos
+            timer1.Start();
         }
 
         private async void btnClientes_Click(object sender, EventArgs e)
@@ -70,6 +74,21 @@ namespace Menu
         private void sairCadastrosToolStripMenu_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            // Move o Label para a esquerda
+            xOffset -= 5;
+
+            // Reinicia a posição se o texto sair da tela à esquerda
+            if (xOffset < -lblTextoMenu.Width)
+            {
+                xOffset = this.Width;
+            }
+
+            // Atualiza a localização do Label
+            lblTextoMenu.Location = new Point(xOffset, lblTextoMenu.Location.Y);
         }
     }
 }

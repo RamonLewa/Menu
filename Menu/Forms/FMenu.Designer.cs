@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FMenu));
             this.btnFornecedores = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -38,11 +39,16 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.sairCadastrosToolStripMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxGifMenu = new System.Windows.Forms.PictureBox();
             this.btnEstoque = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
+            this.lblClientes = new System.Windows.Forms.Label();
+            this.lblEstoque = new System.Windows.Forms.Label();
+            this.lblFornecedores = new System.Windows.Forms.Label();
+            this.lblTextoMenu = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGifMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // btnFornecedores
@@ -50,7 +56,7 @@
             this.btnFornecedores.FlatAppearance.BorderSize = 0;
             this.btnFornecedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFornecedores.Image = global::Menu.Properties.Resources.homem_gravata;
-            this.btnFornecedores.Location = new System.Drawing.Point(161, 35);
+            this.btnFornecedores.Location = new System.Drawing.Point(187, 35);
             this.btnFornecedores.Name = "btnFornecedores";
             this.btnFornecedores.Size = new System.Drawing.Size(55, 55);
             this.btnFornecedores.TabIndex = 2;
@@ -123,21 +129,21 @@
             this.sairToolStripMenu.Text = "Sair";
             this.sairToolStripMenu.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
-            // pictureBox1
+            // pictureBoxGifMenu
             // 
-            this.pictureBox1.Image = global::Menu.Properties.Resources.SGBr_junino24;
-            this.pictureBox1.Location = new System.Drawing.Point(1737, 35);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(155, 74);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxGifMenu.Image = global::Menu.Properties.Resources.SGBr_junino24;
+            this.pictureBoxGifMenu.Location = new System.Drawing.Point(1737, 35);
+            this.pictureBoxGifMenu.Name = "pictureBoxGifMenu";
+            this.pictureBoxGifMenu.Size = new System.Drawing.Size(155, 74);
+            this.pictureBoxGifMenu.TabIndex = 5;
+            this.pictureBoxGifMenu.TabStop = false;
             // 
             // btnEstoque
             // 
             this.btnEstoque.FlatAppearance.BorderSize = 0;
             this.btnEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEstoque.Image = global::Menu.Properties.Resources.caixa;
-            this.btnEstoque.Location = new System.Drawing.Point(86, 35);
+            this.btnEstoque.Location = new System.Drawing.Point(98, 35);
             this.btnEstoque.Name = "btnEstoque";
             this.btnEstoque.Size = new System.Drawing.Size(55, 55);
             this.btnEstoque.TabIndex = 1;
@@ -149,12 +155,51 @@
             this.btnClientes.FlatAppearance.BorderSize = 0;
             this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClientes.Image = global::Menu.Properties.Resources.pessoa;
-            this.btnClientes.Location = new System.Drawing.Point(12, 35);
+            this.btnClientes.Location = new System.Drawing.Point(7, 35);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(55, 55);
             this.btnClientes.TabIndex = 0;
             this.btnClientes.UseVisualStyleBackColor = true;
             this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
+            // 
+            // lblClientes
+            // 
+            this.lblClientes.AutoSize = true;
+            this.lblClientes.Location = new System.Drawing.Point(12, 93);
+            this.lblClientes.Name = "lblClientes";
+            this.lblClientes.Size = new System.Drawing.Size(44, 13);
+            this.lblClientes.TabIndex = 6;
+            this.lblClientes.Text = "Clientes";
+            // 
+            // lblEstoque
+            // 
+            this.lblEstoque.AutoSize = true;
+            this.lblEstoque.Location = new System.Drawing.Point(102, 93);
+            this.lblEstoque.Name = "lblEstoque";
+            this.lblEstoque.Size = new System.Drawing.Size(46, 13);
+            this.lblEstoque.TabIndex = 7;
+            this.lblEstoque.Text = "Estoque";
+            // 
+            // lblFornecedores
+            // 
+            this.lblFornecedores.AutoSize = true;
+            this.lblFornecedores.Location = new System.Drawing.Point(178, 93);
+            this.lblFornecedores.Name = "lblFornecedores";
+            this.lblFornecedores.Size = new System.Drawing.Size(72, 13);
+            this.lblFornecedores.TabIndex = 8;
+            this.lblFornecedores.Text = "Fornecedores";
+            // 
+            // lblTextoMenu
+            // 
+            this.lblTextoMenu.Location = new System.Drawing.Point(505, 56);
+            this.lblTextoMenu.Name = "lblTextoMenu";
+            this.lblTextoMenu.Size = new System.Drawing.Size(358, 15);
+            this.lblTextoMenu.TabIndex = 9;
+            this.lblTextoMenu.Text = "SGBr Sistemas, cultivando o amor e realizando sonhos!";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FMenu
             // 
@@ -162,8 +207,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1904, 129);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(1904, 138);
+            this.Controls.Add(this.lblTextoMenu);
+            this.Controls.Add(this.lblFornecedores);
+            this.Controls.Add(this.lblEstoque);
+            this.Controls.Add(this.lblClientes);
+            this.Controls.Add(this.pictureBoxGifMenu);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnFornecedores);
             this.Controls.Add(this.btnEstoque);
@@ -176,7 +225,7 @@
             this.Text = "Menu | |";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGifMenu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,7 +237,7 @@
         private System.Windows.Forms.Button btnEstoque;
         private System.Windows.Forms.Button btnFornecedores;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxGifMenu;
         private System.Windows.Forms.ToolStripMenuItem cadastrosToolStripMenu;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenu;
         private System.Windows.Forms.ToolStripMenuItem clientesCadastrosToolStripMenu;
@@ -196,6 +245,11 @@
         private System.Windows.Forms.ToolStripMenuItem fornecedoresCadastrosToolStripMenu;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem sairCadastrosToolStripMenu;
+        private System.Windows.Forms.Label lblClientes;
+        private System.Windows.Forms.Label lblEstoque;
+        private System.Windows.Forms.Label lblFornecedores;
+        private System.Windows.Forms.Label lblTextoMenu;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

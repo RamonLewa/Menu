@@ -187,6 +187,12 @@
     <Compile Include="Forms\FEstoque.Designer.cs">
       <DependentUpon>FEstoque.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FExportaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FExportaClientes.Designer.cs">
+      <DependentUpon>FExportaClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FFornecedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,11 +222,17 @@
     <EmbeddedResource Include="Forms\FEstoque.resx">
       <DependentUpon>FEstoque.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FExportaClientes.resx">
+      <DependentUpon>FExportaClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FFornecedores.resx">
       <DependentUpon>FFornecedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FMenu.resx">
       <DependentUpon>FMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SGForm.resx">
+      <DependentUpon>SGForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

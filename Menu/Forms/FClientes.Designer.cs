@@ -41,9 +41,9 @@
             // DataGridClientes
             // 
             this.DataGridClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridClientes.Location = new System.Drawing.Point(12, 114);
+            this.DataGridClientes.Location = new System.Drawing.Point(12, 214);
             this.DataGridClientes.Name = "DataGridClientes";
-            this.DataGridClientes.Size = new System.Drawing.Size(776, 324);
+            this.DataGridClientes.Size = new System.Drawing.Size(776, 224);
             this.DataGridClientes.TabIndex = 0;
             this.DataGridClientes.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridClientes_MouseDown);
             // 
@@ -66,7 +66,7 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(180, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(186, 6);
             // 
             // importarClientes
             // 

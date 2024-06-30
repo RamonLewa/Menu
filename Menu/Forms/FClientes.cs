@@ -59,8 +59,8 @@ namespace Menu.Forms
 
         private void exportarClientes_Click(object sender, EventArgs e)
         {
-            ExportarPlanilhaClientes planilha = new ExportarPlanilhaClientes();
-            planilha.CreateExcelFile();
+            FExportaClientes fExportaClientes = new FExportaClientes();
+            fExportaClientes.ShowDialog();
         }
 
         private void importarClientes_Click(object sender, EventArgs e)
