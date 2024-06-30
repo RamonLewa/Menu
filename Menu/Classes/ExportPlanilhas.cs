@@ -15,13 +15,27 @@ namespace Menu.Classes
 {
     public class ExportarPlanilhaClientes
     {
-        public void CreateExcelFile(CheckedListBox.CheckedItemCollection checkedItems)
+        public void CreateExcelFile(CheckedListBox.CheckedItemCollection checkedItems, string filtro)
         {
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 
             using (var context = new DataContext())
             {
-                List<TCliente> clientes = context.TCliente.ToList();
+                List<TCliente> clientes;
+
+                switch (filtro)
+                {
+                    case "Ativos":
+                        clientes = context.TCliente.Where(cli => cli.Ativo == "SIM").OrderBy(cli => cli.Controle).ToList();
+                        break;
+                    case "Inativos":
+                        clientes = context.TCliente.Where(cli => cli.Ativo != "SIM").OrderBy(cli => cli.Controle).ToList();
+                        break;
+                    default:
+                        clientes = context.TCliente.OrderBy(cli => cli.Controle).ToList();
+                        break;
+                }
+
                 using (var package = new ExcelPackage())
                 {
                     var worksheet = package.Workbook.Worksheets.Add("Planilha clientes");
@@ -93,7 +107,7 @@ namespace Menu.Classes
     }
 
 
-public class ExportarPlanilhaFornecedores
+    public class ExportarPlanilhaFornecedores
     {
         public void CreateExcelFile()
         {

@@ -16,11 +16,12 @@ using System.Windows.Forms;
 
 namespace Menu.Forms
 {
-    public partial class FClientes : Form
+    public partial class FClientes : SGForm
     {
         public FClientes()
         {
             InitializeComponent();
+            FullWidthScreen();
         }
 
         public async Task LoadDataAsync()
@@ -34,6 +35,7 @@ namespace Menu.Forms
                     return context.TCliente
                                   .AsParallel()
                                   .WithDegreeOfParallelism(Environment.ProcessorCount)
+                                  .OrderBy(cli => cli.Controle)
                                   .ToList();
                 });
             }

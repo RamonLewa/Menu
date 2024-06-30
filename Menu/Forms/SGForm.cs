@@ -35,8 +35,6 @@ namespace Menu.Forms
         {
             int screenWidth = Screen.PrimaryScreen.Bounds.Width;
             this.Width = screenWidth + 16;
-            this.StartPosition = FormStartPosition.Manual;
-            this.Location = new System.Drawing.Point(-8, 0);
         }
     }
 }

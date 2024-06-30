@@ -172,6 +172,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\ColumnMap.cs" />
     <Compile Include="Classes\DataContext.cs" />
     <Compile Include="Classes\ImportPlanilhas.cs" />
     <Compile Include="Classes\ExportPlanilhas.cs" />
@@ -269,6 +270,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\homem-gravata.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\confirmar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

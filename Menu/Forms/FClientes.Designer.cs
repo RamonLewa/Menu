@@ -41,9 +41,9 @@
             // DataGridClientes
             // 
             this.DataGridClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridClientes.Location = new System.Drawing.Point(12, 214);
+            this.DataGridClientes.Location = new System.Drawing.Point(12, 12);
             this.DataGridClientes.Name = "DataGridClientes";
-            this.DataGridClientes.Size = new System.Drawing.Size(776, 224);
+            this.DataGridClientes.Size = new System.Drawing.Size(1880, 809);
             this.DataGridClientes.TabIndex = 0;
             this.DataGridClientes.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridClientes_MouseDown);
             // 
@@ -79,9 +79,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1904, 833);
             this.Controls.Add(this.DataGridClientes);
+            this.Location = new System.Drawing.Point(-8, 169);
             this.Name = "FClientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Clientes";
             ((System.ComponentModel.ISupportInitialize)(this.DataGridClientes)).EndInit();
             this.ContextMenuClientes.ResumeLayout(false);

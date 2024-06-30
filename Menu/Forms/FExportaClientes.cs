@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Menu.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,12 @@ using System.Windows.Forms;
 
 namespace Menu.Forms
 {
-    public partial class FExportaClientes : Form
+    public partial class FExportaClientes : SGForm
     {
         public FExportaClientes()
         {
             InitializeComponent();
+            comboBoxFiltro.SelectedIndex = 0;
         }
 
         private void checkBoxSelecionarTodosClientes_CheckedChanged(object sender, EventArgs e)
@@ -27,6 +29,13 @@ namespace Menu.Forms
             {
                 checkedListClientes.SetItemChecked(i, checkAll);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var filtro = comboBoxFiltro.SelectedItem.ToString();
+            ExportarPlanilhaClientes ex = new ExportarPlanilhaClientes();
+            ex.CreateExcelFile(checkedListClientes.CheckedItems, filtro);
         }
     }
 }

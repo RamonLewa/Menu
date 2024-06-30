@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FExportaClientes));
             this.checkedListClientes = new System.Windows.Forms.CheckedListBox();
             this.checkBoxSelecionarTodosClientes = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.comboBoxFiltro = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // checkedListClientes
@@ -94,7 +96,7 @@
             "Campo 10"});
             this.checkedListClientes.Location = new System.Drawing.Point(12, 46);
             this.checkedListClientes.Name = "checkedListClientes";
-            this.checkedListClientes.Size = new System.Drawing.Size(203, 169);
+            this.checkedListClientes.Size = new System.Drawing.Size(208, 169);
             this.checkedListClientes.TabIndex = 0;
             // 
             // checkBoxSelecionarTodosClientes
@@ -108,11 +110,42 @@
             this.checkBoxSelecionarTodosClientes.UseVisualStyleBackColor = true;
             this.checkBoxSelecionarTodosClientes.CheckedChanged += new System.EventHandler(this.checkBoxSelecionarTodosClientes_CheckedChanged);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Blue;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Image = global::Menu.Properties.Resources.confirmar;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(138, 276);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(82, 28);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Confirmar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // comboBoxFiltro
+            // 
+            this.comboBoxFiltro.FormattingEnabled = true;
+            this.comboBoxFiltro.Items.AddRange(new object[] {
+            "Todos",
+            "Ativos",
+            "Inativos"});
+            this.comboBoxFiltro.Location = new System.Drawing.Point(12, 232);
+            this.comboBoxFiltro.Name = "comboBoxFiltro";
+            this.comboBoxFiltro.Size = new System.Drawing.Size(208, 21);
+            this.comboBoxFiltro.TabIndex = 3;
+            // 
             // FExportaClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(227, 274);
+            this.ClientSize = new System.Drawing.Size(232, 316);
+            this.Controls.Add(this.comboBoxFiltro);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.checkBoxSelecionarTodosClientes);
             this.Controls.Add(this.checkedListClientes);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -130,5 +163,7 @@
 
         private System.Windows.Forms.CheckedListBox checkedListClientes;
         private System.Windows.Forms.CheckBox checkBoxSelecionarTodosClientes;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBoxFiltro;
     }
 }
