@@ -27,13 +27,13 @@ namespace Menu.Classes
                 switch (filtro)
                 {
                     case "Ativos":
-                        clientes = context.TCliente.Where(cli => cli.Ativo == "SIM").OrderBy(cli => cli.Controle).ToList();
+                        clientes = context.TCliente.Where(cli => cli.Ativo == "SIM").ToList();
                         break;
                     case "Inativos":
-                        clientes = context.TCliente.Where(cli => cli.Ativo != "SIM").OrderBy(cli => cli.Controle).ToList();
+                        clientes = context.TCliente.Where(cli => cli.Ativo != "SIM").ToList();
                         break;
                     default:
-                        clientes = context.TCliente.OrderBy(cli => cli.Controle).ToList();
+                        clientes = context.TCliente.ToList();
                         break;
                 }
 
@@ -80,7 +80,17 @@ namespace Menu.Classes
                                 var propertyInfo = typeof(TCliente).GetProperty(propertyName);
                                 if (propertyInfo != null)
                                 {
-                                    worksheet.Cells[i + 2, colIndex].Value = propertyInfo.GetValue(clientes[i]);
+                                    var value = propertyInfo.GetValue(clientes[i]);
+
+                                    if (value is DateTime)
+                                    {
+                                        worksheet.Cells[i + 2, colIndex].Style.Numberformat.Format = "dd/MM/yyyy";
+                                        worksheet.Cells[i + 2, colIndex].Value = ((DateTime)value).ToOADate();
+                                    }
+                                    else
+                                    {
+                                        worksheet.Cells[i + 2, colIndex].Value = value;
+                                    }
                                 }
                             }
                             colIndex++;
@@ -164,7 +174,17 @@ namespace Menu.Classes
                                 var propertyInfo = typeof(TFornecedor).GetProperty(propertyName);
                                 if (propertyInfo != null)
                                 {
-                                    worksheet.Cells[i + 2, colIndex].Value = propertyInfo.GetValue(fornecedores[i]);
+                                    var value = propertyInfo.GetValue(fornecedores[i]);
+
+                                    if (value is DateTime)
+                                    {
+                                        worksheet.Cells[i + 2, colIndex].Style.Numberformat.Format = "dd/MM/yyyy";
+                                        worksheet.Cells[i + 2, colIndex].Value = ((DateTime)value).ToOADate();
+                                    }
+                                    else
+                                    {
+                                        worksheet.Cells[i + 2, colIndex].Value = value;
+                                    }
                                 }
                             }
                             colIndex++;
@@ -304,7 +324,17 @@ namespace Menu.Classes
                                 var propertyInfo = typeof(TEstoque).GetProperty(propertyName);
                                 if (propertyInfo != null)
                                 {
-                                    worksheet.Cells[i + 2, colIndex].Value = propertyInfo.GetValue(estoque[i]);
+                                    var value = propertyInfo.GetValue(estoque[i]);
+
+                                    if (value is DateTime)
+                                    {
+                                        worksheet.Cells[i + 2, colIndex].Style.Numberformat.Format = "dd/MM/yyyy";
+                                        worksheet.Cells[i + 2, colIndex].Value = ((DateTime)value).ToOADate();
+                                    }
+                                    else
+                                    {
+                                        worksheet.Cells[i + 2, colIndex].Value = value;
+                                    }
                                 }
                             }
                             colIndex++;

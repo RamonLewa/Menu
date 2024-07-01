@@ -73,6 +73,7 @@
             this.importarFornecedores.Name = "importarFornecedores";
             this.importarFornecedores.Size = new System.Drawing.Size(218, 22);
             this.importarFornecedores.Text = "Importar fornecedores .xlsx";
+            this.importarFornecedores.Click += new System.EventHandler(this.importarFornecedores_Click);
             // 
             // FFornecedores
             // 

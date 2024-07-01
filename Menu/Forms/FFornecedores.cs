@@ -62,5 +62,11 @@ namespace Menu.Forms
             FExportaFornecedores fExportaFornecedores = new FExportaFornecedores();
             fExportaFornecedores.ShowDialog();
         }
+
+        private void importarFornecedores_Click(object sender, EventArgs e)
+        {
+            ImportarPlanilhaFornecedores planilha = new ImportarPlanilhaFornecedores();
+            planilha.ImportExcelFile();
+        }
     }
 }
