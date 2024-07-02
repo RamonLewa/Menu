@@ -73,6 +73,7 @@
             this.importarEstoque.Name = "importarEstoque";
             this.importarEstoque.Size = new System.Drawing.Size(191, 22);
             this.importarEstoque.Text = "Importar estoque .xlsx";
+            this.importarEstoque.Click += new System.EventHandler(this.importarEstoque_Click);
             // 
             // FEstoque
             // 

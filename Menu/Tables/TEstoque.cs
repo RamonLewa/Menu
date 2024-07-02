@@ -177,7 +177,7 @@ namespace Menu.Tables
         public decimal? PercImpostoMedio { get; set; }
 
         [DisplayName("Cód. CST origem")]
-        public string CodCSTOrigem { get; set; }
+        public int CodCSTOrigem { get; set; }
 
         [DisplayName("Cód. emitente")]
         public string CodEmitente { get; set; }
@@ -457,6 +457,9 @@ namespace Menu.Tables
 
         [DisplayName("Tipo barra")]
         public string TipoBarras { get; set; }
+
+        [DisplayName("Tributado")]
+        public string Tributado { get; set; }
     }
 
     public class TEstoqueTypeConfiguration : IEntityTypeConfiguration<TEstoque>
@@ -764,6 +767,8 @@ namespace Menu.Tables
             builder.Property(e => e.PercCashback).HasColumnName("PERCCASHBACK");
 
             builder.Property(e => e.TipoBarras).HasColumnName("TIPOBARRA");
+
+            builder.Property(e => e.Tributado).HasColumnName("TRIBUTADO");
         }
     }
 }

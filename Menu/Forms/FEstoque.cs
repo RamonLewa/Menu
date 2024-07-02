@@ -63,5 +63,11 @@ namespace Menu.Forms
             FExportaEstoque fExportaEstoque = new FExportaEstoque();
             fExportaEstoque.ShowDialog();
         }
+
+        private void importarEstoque_Click(object sender, EventArgs e)
+        {
+            ImportarPlanilhaEstoque planilha = new ImportarPlanilhaEstoque();
+            planilha.ImportExcelFile();
+        }
     }
 }
