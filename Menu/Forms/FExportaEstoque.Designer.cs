@@ -250,6 +250,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FExportaEstoque";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Seleção de colunas";
             this.ResumeLayout(false);
             this.PerformLayout();

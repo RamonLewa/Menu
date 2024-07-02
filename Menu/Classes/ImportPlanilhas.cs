@@ -223,7 +223,6 @@ namespace Menu.Classes
                                         CodTributacaoCOFINS = Truncate(GetCellValue(worksheet.Cells[row, 13].Value), 4),
                                         CSOSN = Truncate(GetCellValue(worksheet.Cells[row, 14].Value), 3),
                                         AliquotaICMSECF = ParseDecimal(GetCellValue(worksheet.Cells[row, 15].Value)),
-                                        CodUnidadeMedida = ParseInt(GetCellValue(worksheet.Cells[row, 16].Value)),
                                         QtdeInicial = ParseInt(GetCellValue(worksheet.Cells[row, 17].Value)),
                                         DataHoraCadastro = dateTime,
                                         Ativo = "SIM",
@@ -232,7 +231,8 @@ namespace Menu.Classes
                                         CodCSTOrigem = 1,
                                         FatorConversao = "*",
                                         Tributado = "Sim",
-                                        Pesado = "Não"
+                                        Pesado = "Não",
+                                        CodUnidadeMedida = 1
                                     };
 
                                     estoques.Add(estoque);

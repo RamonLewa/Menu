@@ -15,11 +15,12 @@ using System.Windows.Forms;
 
 namespace Menu.Forms
 {
-    public partial class FFornecedores : Form
+    public partial class FFornecedores : SGForm
     {
         public FFornecedores()
         {
             InitializeComponent();
+            FullWidthScreen();
         }
 
         public async Task LoadDataAsync()

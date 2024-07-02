@@ -16,11 +16,13 @@ using System.Threading;
 
 namespace Menu.Forms
 {
-    public partial class FEstoque : Form
+    public partial class FEstoque : SGForm
     {
         public FEstoque()
         {
             InitializeComponent();
+
+            FullWidthScreen();
         }
 
         public async Task LoadDataAsync()
