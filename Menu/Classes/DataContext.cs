@@ -47,6 +47,7 @@ namespace Menu.Classes
         public DbSet<TCliente> TCliente { get; set; }
         public DbSet<TEstoque> TEstoque { get; set; }
         public DbSet<TFornecedor> TFornecedor { get; set; }
+        public DbSet<TEmitente> TEmitente { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -55,6 +56,7 @@ namespace Menu.Classes
             new TClienteTypeConfiguration().Configure(modelBuilder.Entity<TCliente>());
             new TEstoqueTypeConfiguration().Configure(modelBuilder.Entity<TEstoque>());
             new TFornecedorTypeConfiguration().Configure(modelBuilder.Entity<TFornecedor>());
+            new TEmitenteEntityTypeConfiguration().Configure(modelBuilder.Entity<TEmitente>());
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

@@ -47,15 +47,7 @@ namespace Menu.Forms
         {
             if (e.Button == MouseButtons.Right)
             {
-                var hitTestInfo = DataGridClientes.HitTest(e.X, e.Y);
-
-                if (hitTestInfo.RowIndex >= 0 && hitTestInfo.ColumnIndex >= 0)
-                {
-                    DataGridClientes.ClearSelection();
-                    DataGridClientes.Rows[hitTestInfo.RowIndex].Cells[hitTestInfo.ColumnIndex].Selected = true;
-
-                    ContextMenuClientes.Show(DataGridClientes, new Point(e.X, e.Y));
-                }
+                ContextMenuClientes.Show(DataGridClientes, new Point(e.X, e.Y));
             }
         }
 

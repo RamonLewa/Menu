@@ -46,15 +46,7 @@ namespace Menu.Forms
         {
             if (e.Button == MouseButtons.Right)
             {
-                var hitTestInfo = dataGridFornecedores.HitTest(e.X, e.Y);
-
-                if (hitTestInfo.RowIndex >= 0 && hitTestInfo.ColumnIndex >= 0)
-                {
-                    dataGridFornecedores.ClearSelection();
-                    dataGridFornecedores.Rows[hitTestInfo.RowIndex].Cells[hitTestInfo.ColumnIndex].Selected = true;
-
-                    contextMenuFornecedores.Show(dataGridFornecedores, new Point(e.X, e.Y));
-                }
+                contextMenuFornecedores.Show(dataGridFornecedores, new Point(e.X, e.Y));
             }
         }
 

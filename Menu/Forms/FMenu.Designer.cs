@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FMenu));
-            this.btnFornecedores = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastrosToolStripMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesCadastrosToolStripMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,29 +37,16 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.sairCadastrosToolStripMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBoxGifMenu = new System.Windows.Forms.PictureBox();
-            this.btnEstoque = new System.Windows.Forms.Button();
-            this.btnClientes = new System.Windows.Forms.Button();
             this.lblClientes = new System.Windows.Forms.Label();
             this.lblEstoque = new System.Windows.Forms.Label();
             this.lblFornecedores = new System.Windows.Forms.Label();
-            this.lblTextoMenu = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBoxGifMenu = new System.Windows.Forms.PictureBox();
+            this.btnFornecedores = new System.Windows.Forms.Button();
+            this.btnEstoque = new System.Windows.Forms.Button();
+            this.btnClientes = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGifMenu)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnFornecedores
-            // 
-            this.btnFornecedores.FlatAppearance.BorderSize = 0;
-            this.btnFornecedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFornecedores.Image = global::Menu.Properties.Resources.homem_gravata;
-            this.btnFornecedores.Location = new System.Drawing.Point(187, 35);
-            this.btnFornecedores.Name = "btnFornecedores";
-            this.btnFornecedores.Size = new System.Drawing.Size(55, 55);
-            this.btnFornecedores.TabIndex = 2;
-            this.btnFornecedores.UseVisualStyleBackColor = true;
-            this.btnFornecedores.Click += new System.EventHandler(this.btnFornecedores_Click);
             // 
             // menuStrip1
             // 
@@ -129,39 +114,6 @@
             this.sairToolStripMenu.Text = "Sair";
             this.sairToolStripMenu.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
-            // pictureBoxGifMenu
-            // 
-            this.pictureBoxGifMenu.Image = global::Menu.Properties.Resources.SGBr_junino24;
-            this.pictureBoxGifMenu.Location = new System.Drawing.Point(1737, 35);
-            this.pictureBoxGifMenu.Name = "pictureBoxGifMenu";
-            this.pictureBoxGifMenu.Size = new System.Drawing.Size(155, 74);
-            this.pictureBoxGifMenu.TabIndex = 5;
-            this.pictureBoxGifMenu.TabStop = false;
-            // 
-            // btnEstoque
-            // 
-            this.btnEstoque.FlatAppearance.BorderSize = 0;
-            this.btnEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEstoque.Image = global::Menu.Properties.Resources.caixa;
-            this.btnEstoque.Location = new System.Drawing.Point(98, 35);
-            this.btnEstoque.Name = "btnEstoque";
-            this.btnEstoque.Size = new System.Drawing.Size(55, 55);
-            this.btnEstoque.TabIndex = 1;
-            this.btnEstoque.UseVisualStyleBackColor = true;
-            this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click);
-            // 
-            // btnClientes
-            // 
-            this.btnClientes.FlatAppearance.BorderSize = 0;
-            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClientes.Image = global::Menu.Properties.Resources.pessoa;
-            this.btnClientes.Location = new System.Drawing.Point(7, 35);
-            this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(55, 55);
-            this.btnClientes.TabIndex = 0;
-            this.btnClientes.UseVisualStyleBackColor = true;
-            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
-            // 
             // lblClientes
             // 
             this.lblClientes.AutoSize = true;
@@ -189,17 +141,62 @@
             this.lblFornecedores.TabIndex = 8;
             this.lblFornecedores.Text = "Fornecedores";
             // 
-            // lblTextoMenu
+            // pictureBoxGifMenu
             // 
-            this.lblTextoMenu.Location = new System.Drawing.Point(505, 56);
-            this.lblTextoMenu.Name = "lblTextoMenu";
-            this.lblTextoMenu.Size = new System.Drawing.Size(358, 15);
-            this.lblTextoMenu.TabIndex = 9;
-            this.lblTextoMenu.Text = "SGBr Sistemas, cultivando o amor e realizando sonhos!";
+            this.pictureBoxGifMenu.Image = global::Menu.Properties.Resources.SGBr_SGBR2024;
+            this.pictureBoxGifMenu.Location = new System.Drawing.Point(1737, 35);
+            this.pictureBoxGifMenu.Name = "pictureBoxGifMenu";
+            this.pictureBoxGifMenu.Size = new System.Drawing.Size(155, 74);
+            this.pictureBoxGifMenu.TabIndex = 5;
+            this.pictureBoxGifMenu.TabStop = false;
             // 
-            // timer1
+            // btnFornecedores
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.btnFornecedores.BackgroundImage = global::Menu.Properties.Resources.homem_gravata;
+            this.btnFornecedores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnFornecedores.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFornecedores.FlatAppearance.BorderSize = 0;
+            this.btnFornecedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFornecedores.Location = new System.Drawing.Point(187, 35);
+            this.btnFornecedores.Name = "btnFornecedores";
+            this.btnFornecedores.Size = new System.Drawing.Size(55, 55);
+            this.btnFornecedores.TabIndex = 2;
+            this.btnFornecedores.UseVisualStyleBackColor = true;
+            this.btnFornecedores.Click += new System.EventHandler(this.btnFornecedores_Click);
+            this.btnFornecedores.MouseEnter += new System.EventHandler(this.btnFornecedores_MouseEnter);
+            this.btnFornecedores.MouseLeave += new System.EventHandler(this.btnFornecedores_MouseLeave);
+            // 
+            // btnEstoque
+            // 
+            this.btnEstoque.BackgroundImage = global::Menu.Properties.Resources.caixa;
+            this.btnEstoque.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnEstoque.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEstoque.FlatAppearance.BorderSize = 0;
+            this.btnEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEstoque.Location = new System.Drawing.Point(98, 35);
+            this.btnEstoque.Name = "btnEstoque";
+            this.btnEstoque.Size = new System.Drawing.Size(55, 55);
+            this.btnEstoque.TabIndex = 1;
+            this.btnEstoque.UseVisualStyleBackColor = true;
+            this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click);
+            this.btnEstoque.MouseEnter += new System.EventHandler(this.btnEstoque_MouseEnter);
+            this.btnEstoque.MouseLeave += new System.EventHandler(this.btnEstoque_MouseLeave);
+            // 
+            // btnClientes
+            // 
+            this.btnClientes.BackgroundImage = global::Menu.Properties.Resources.pessoa;
+            this.btnClientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnClientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClientes.FlatAppearance.BorderSize = 0;
+            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClientes.Location = new System.Drawing.Point(7, 35);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Size = new System.Drawing.Size(55, 55);
+            this.btnClientes.TabIndex = 0;
+            this.btnClientes.UseVisualStyleBackColor = true;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
+            this.btnClientes.MouseEnter += new System.EventHandler(this.btnClientes_MouseEnter);
+            this.btnClientes.MouseLeave += new System.EventHandler(this.btnClientes_MouseLeave);
             // 
             // FMenu
             // 
@@ -208,7 +205,6 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(247)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1904, 138);
-            this.Controls.Add(this.lblTextoMenu);
             this.Controls.Add(this.lblFornecedores);
             this.Controls.Add(this.lblEstoque);
             this.Controls.Add(this.lblClientes);
@@ -224,7 +220,8 @@
             this.MaximizeBox = false;
             this.Name = "FMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Menu | |";
+            this.Text = "Menu | | ";
+            this.Load += new System.EventHandler(this.FMenu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGifMenu)).EndInit();
@@ -250,8 +247,6 @@
         private System.Windows.Forms.Label lblClientes;
         private System.Windows.Forms.Label lblEstoque;
         private System.Windows.Forms.Label lblFornecedores;
-        private System.Windows.Forms.Label lblTextoMenu;
-        private System.Windows.Forms.Timer timer1;
     }
 }
 

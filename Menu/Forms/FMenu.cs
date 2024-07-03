@@ -1,4 +1,6 @@
-﻿using Menu.Forms;
+﻿using Menu.Classes;
+using Menu.Forms;
+using Menu.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,8 +21,6 @@ namespace Menu
         {
             InitializeComponent();
             FullWidthScreen();
-            timer1.Interval = 100;
-            timer1.Start();
         }
 
         private async void btnClientes_Click(object sender, EventArgs e)
@@ -76,16 +76,47 @@ namespace Menu
             this.Close();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void FMenu_Load(object sender, EventArgs e)
         {
-            xOffset -= 5;
-
-            if (xOffset < -lblTextoMenu.Width)
+            using (var dc = new DataContext())
             {
-                xOffset = this.Width;
+                var emitente = dc.TEmitente.FirstOrDefault();
+                this.Text += emitente.RazaoSocial;
             }
-
-            lblTextoMenu.Location = new Point(xOffset, lblTextoMenu.Location.Y);
         }
+
+        #region ButtonImages
+
+        private void btnClientes_MouseEnter(object sender, EventArgs e)
+        {
+            btnClientes.BackgroundImage = Resources.pessoa_selecionado;
+        }
+
+        private void btnClientes_MouseLeave(object sender, EventArgs e)
+        {
+            btnClientes.BackgroundImage = Resources.pessoa;
+        }
+
+        private void btnEstoque_MouseEnter(object sender, EventArgs e)
+        {
+            btnEstoque.BackgroundImage = Resources.caixa_selecionado;
+        }
+
+        private void btnEstoque_MouseLeave(object sender, EventArgs e)
+        {
+            btnEstoque.BackgroundImage= Resources.caixa;
+        }
+
+        private void btnFornecedores_MouseEnter(object sender, EventArgs e)
+        {
+            btnFornecedores.BackgroundImage = Resources.homem_gravata_selecionado;
+        }
+
+        private void btnFornecedores_MouseLeave(object sender, EventArgs e)
+        {
+            btnFornecedores.BackgroundImage= Resources.homem_gravata;
+        }
+
+        #endregion
     }
 }

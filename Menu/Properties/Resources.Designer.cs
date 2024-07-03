@@ -73,6 +73,26 @@ namespace Menu.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap caixa_estoque {
+            get {
+                object obj = ResourceManager.GetObject("caixa-estoque", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap caixa_selecionado {
+            get {
+                object obj = ResourceManager.GetObject("caixa-selecionado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap confirmar {
             get {
                 object obj = ResourceManager.GetObject("confirmar", resourceCulture);
@@ -93,6 +113,16 @@ namespace Menu.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap homem_gravata_selecionado {
+            get {
+                object obj = ResourceManager.GetObject("homem-gravata-selecionado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pessoa {
             get {
                 object obj = ResourceManager.GetObject("pessoa", resourceCulture);
@@ -103,9 +133,29 @@ namespace Menu.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pessoa_selecionado {
+            get {
+                object obj = ResourceManager.GetObject("pessoa_selecionado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SGBr_junino24 {
             get {
                 object obj = ResourceManager.GetObject("SGBr_junino24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SGBr_SGBR2024 {
+            get {
+                object obj = ResourceManager.GetObject("SGBr_SGBR2024", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

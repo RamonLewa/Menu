@@ -226,6 +226,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tables\TCliente.cs" />
+    <Compile Include="Tables\TEmitente.cs" />
     <Compile Include="Tables\TEstoque.cs" />
     <Compile Include="Tables\TFornecedor.cs" />
     <EmbeddedResource Include="Forms\FClientes.resx">
@@ -290,6 +291,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\confirmar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SGBr_SGBR2024.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caixa-estoque.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homem-gravata-selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pessoa_selecionado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caixa-selecionado.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
